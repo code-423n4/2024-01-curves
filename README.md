@@ -28,7 +28,7 @@
 
 ---
 
-# Roll Network audit details
+# Curves audit details
 - Total Prize Pool: $36,500 in USDC
   - HM awards: $24,750 in USDC
   - Analysis awards: $1,500 in USDC
@@ -39,16 +39,16 @@
   - Lookout awards: $2,400 in USDC
   - Scout awards: $500 in USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/024-01-rollnetwork/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2024-01-curves/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts January 8, 2024 20:00 UTC
 - Ends January 15, 2024 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
-The 4naly3er report can be found [here](https://github.com/code-423n4/024-01-rollnetwork/blob/main/4naly3er-report.md).
+The 4naly3er report can be found [here](https://github.com/code-423n4/2024-01-curves/blob/main/4naly3er-report.md).
 
-Automated findings output for the audit can be found [here](https://github.com/code-423n4/024-01-rollnetwork/blob/main/bot-report.md) within 24 hours of audit opening.
+Automated findings output for the audit can be found [here](https://github.com/code-423n4/2024-01-curves/blob/main/bot-report.md) within 24 hours of audit opening.
 
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
