@@ -21,7 +21,6 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
-coverage.json
 
 # nyc test coverage
 .nyc_output
@@ -66,8 +65,15 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Yarn
 .yarn-integrity
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # dotenv environment variables file
 .env
@@ -103,6 +109,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# macbook
+.DS_Store
+
+playground
+
+.yarn/cache
 
 # hardhat ignore
 cache
