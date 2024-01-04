@@ -1,0 +1,96 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CannotSendFunds",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ContractCannotReceiveTransfer",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CurveAlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20TokenAlreadyMinted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ExceededMaxBuyAmount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InsufficientBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InsufficientPayment",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidERC20Metadata",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidFeeDefinition",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidPresaleStartTime",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "LastTokenCannotBeSold",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NonIntegerDepositAmount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PresaleUnavailable",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "SaleNotOpen",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TokenAbsentForCurvesTokenSubject",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UnauthorizedCurvesTokenSubject",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UnverifiedProof",
+      "type": "error"
+    }
+  ],
+  "bytecode": "0x",
+  "contractName": "CurvesErrors",
+  "deployedBytecode": "0x",
+  "deployedLinkReferences": {},
+  "linkReferences": {},
+  "sourceName": "contracts/Curves.sol"
+}
