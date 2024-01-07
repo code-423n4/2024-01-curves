@@ -1,8 +1,33 @@
-# Curves
 
-Smart contracts built for Curves
+# Curves audit details
+- Total Prize Pool: $36,500 in USDC
+  - HM awards: $24,750 in USDC
+  - Analysis awards: $1,500 in USDC
+  - QA awards: $750 in USDC
+  - Bot Race awards: $2,250 in USDC
+  - Gas awards: $750 in USDC
+  - Judge awards: $3,600 in USDC
+  - Lookout awards: $2,400 in USDC
+  - Scout awards: $500 in USDC
+- Join [C4 Discord](https://discord.gg/code4rena) to register
+- Submit findings [using the C4 form](https://code4rena.com/contests/2024-01-curves/submit)
+- [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
+- Starts January 8, 2024 20:00 UTC
+- Ends January 15, 2024 20:00 UTC
 
-# Scoping detail
+## Automated Findings / Publicly Known Issues
+
+The 4naly3er report can be found [here](https://github.com/code-423n4/2024-01-curves/blob/main/4naly3er-report.md).
+
+Automated findings output for the audit can be found [here](https://github.com/code-423n4/2024-01-curves/blob/main/bot-report.md) within 24 hours of audit opening.
+
+_Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
+
+
+# Overview
+
+
+## Scoping detail
 
 The audit will encompass the following files, each integral to the functioning of the protocol:
 
@@ -18,7 +43,7 @@ The audit will encompass the following files, each integral to the functioning o
 
 Each of these files plays a crucial role in the protocol’s architecture and functionality. The audit will methodically evaluate them for security, efficiency, and adherence to best practices in smart contract development.
 
-# Summary
+## Summary
 
 The Curves protocol, an extension of friend.tech, introduces several innovative features. For context on friend.tech, consider this insightful article: [Friend Tech Smart Contract Breakdown](https://medium.com/valixconsulting/friend-tech-smart-contract-breakdown-c5588ae3a1cf). Key enhancements in the Curves protocol include:
 
@@ -32,7 +57,7 @@ The Curves protocol, an extension of friend.tech, introduces several innovative 
 
 These additions by Curves not only enhance functionality but also foster a more robust and inclusive financial ecosystem.
 
-# Documentation
+## Documentation
 There's no official friend.tech documentation but there's a lot of great articles. Here you can find some of them:
 
 [Friend Tech Smart Contracts](https://basescan.org/address/0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4#code). 
@@ -41,71 +66,66 @@ There's no official friend.tech documentation but there's a lot of great article
 
 [Understanding Friend Tech through Smart Contracts](https://ada-d.medium.com/understanding-friend-tech-through-smart-contracts-edac5d98cd49). 
 
-# Instalation
 
-`yarn`
 
-### VSCode
+# Scope
 
-VSCode is not familiar with the solidity language, so [`solidity support`](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) needs to be installed.
 
-Having done that you should proceed to install [`prettier-vscode`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+- [ ] In the table format shown below, provide the name of each contract and:
+  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
+  - [ ] external contracts called in each
+  - [ ] libraries used in each
 
-```Bash
-code --install-extension esbenp.prettier-vscode
-```
+*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
 
-# Test
+| Contract | SLOC | Purpose | Libraries used |  
+| ----------- | ----------- | ----------- | ----------- |
+| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
 
-Run test:
+## Out of scope
 
-```
-npx hardhat test
-```
+Any file not listed in the scope above is out of scope.
 
-# Run localhost
+# Additional Context
 
-To run on localhost you should first start local node and then deploy to it
+- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
+- [ ] Please list specific ERC20 that your protocol is anticipated to interact with. Could be "any" (literally anything, fee on transfer tokens, ERC777 tokens and so forth) or a list of tokens you envision using on launch.
+- [ ] Please list specific ERC721 that your protocol is anticipated to interact with.
+- [ ] Which blockchains will this code be deployed to, and are considered in scope for this audit?
+- [ ] Please list all trusted roles (e.g. operators, slashers, pausers, etc.), the privileges they hold, and any conditions under which privilege escalation is expected/allowable
+- [ ] In the event of a DOS, could you outline a minimum duration after which you would consider a finding to be valid? This question is asked in the context of most systems' capacity to handle DoS attacks gracefully for a certain period.
+- [ ] Is any part of your implementation intended to conform to any EIP's? If yes, please list the contracts in this format: 
+  - `Contract1`: Should comply with `ERC/EIPX`
+  - `Contract2`: Should comply with `ERC/EIPY`
 
-```
-npx hardhat node
-npx hardhat run deployment/deploy-dev.ts --network localhost
-```
+## Attack ideas (Where to look for bugs)
+*List specific areas to address - see [this blog post](https://medium.com/code4rena/the-security-council-elections-within-the-arbitrum-dao-a-comprehensive-guide-aa6d001aae60#9adb) for an example*
 
-# Deploy
+## Main invariants
+*Describe the project's main invariants (properties that should NEVER EVER be broken).*
 
-Deploy to any network is the same. After each deploy you can find the Json file with the Abi and address information.
-Be sure you set the right values on .env
-
-```
-npx hardhat run deployment/deploy-dev.ts --network goerli
-```
-
-or
+## Scoping Details 
 
 ```
-npx hardhat run deployment/deploy-prod.ts --network mainnet
+- If you have a public code repo, please share it here: https://github.com/roll-network/curves  
+- How many contracts are in scope?: 5   
+- Total SLoC for these contracts?: 660  
+- How many external imports are there?: 5  
+- How many separate interfaces and struct definitions are there for the contracts within scope?: 5  
+- Does most of your code generally use composition or inheritance?: Composition   
+- How many external calls?: 0   
+- What is the overall line coverage percentage provided by your tests?: 100
+- Is this an upgrade of an existing system?: True - Fork from tech.finance
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): Uses L2, ERC-20 Token 
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False   
+- Please describe required context:   
+- Does it use an oracle?: No
+- Describe any novel or unique curve logic or mathematical models your code uses: The curve is the same as tech.finance 
+- Is this either a fork of or an alternate implementation of another project?:   
+- Does it use a side-chain?:
+- Describe any specific areas you would like addressed:
 ```
 
-# Static validation
+# Tests
 
-This code was testing using slither.
-
-```
-slither . --filter-paths "contracts/test/|node_modules/" --exclude naming-convention
-```
-
-# Test coverage
-
-For test coverage we use `solidity-coverage` and it's already included in package.json.
-To run test coverage you should execute
-
-```
-npx hardhat coverage
-```
-
-# Local node
-## How to run it
-Create the docker image with `docker build -t hardhat-node .`
-Run the image `docker run --env-file .env -p 8545:8545 hardhat-node`
-
+See [install.md](https://github.dev/code-423n4/2024-01-curves/tree/main/install.md)
