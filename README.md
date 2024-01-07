@@ -71,16 +71,13 @@ There's no official friend.tech documentation but there's a lot of great article
 # Scope
 
 
-- [ ] In the table format shown below, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
-
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/Curves.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol) | 413 | | openzeppelin |
+| [contracts/FeeSplitter.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/FeeSplitter.sol) | 95 | | openzeppelin |
+| [contracts/Security.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Security.sol) | 23 | | |
+| [contracts/CurvesERC20.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/CurvesERC20.sol) | 14 | | openzeppelin |
+| [contracts/CurvesERC20Factory.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/CurvesERC20Factory.sol) | 8 | | |
 
 ## Out of scope
 
