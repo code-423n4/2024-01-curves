@@ -93,7 +93,6 @@ Any file not listed in the scope above is out of scope.
    2. **Manager**: Managers possess the authority to adjust various fees, with the exception of the protocol fee. While the protocol currently supports multiple managers, the long-term vision is to transition this responsibility to a decentralized autonomous organization (DAO), fostering greater community involvement and decentralized governance.
 
 ## Attack ideas (Where to look for bugs)
-*List specific areas to address - see [this blog post](https://medium.com/code4rena/the-security-council-elections-within-the-arbitrum-dao-a-comprehensive-guide-aa6d001aae60#9adb) for an example*
 
 The primary security threats that our protocol aims to mitigate include:
 
