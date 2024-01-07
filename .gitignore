@@ -113,3 +113,6 @@ artifacts
 # coverage
 coverage/
 coverage.json
+
+contracts/abi
+contracts/types
