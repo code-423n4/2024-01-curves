@@ -128,4 +128,4 @@ Any file not listed in the scope above is out of scope.
 
 # Tests
 
-See [install.md](https://github.dev/code-423n4/2024-01-curves/tree/main/install.md)
+See [install.md](https://github.com/code-423n4/2024-01-curves/blob/main/install.md)
