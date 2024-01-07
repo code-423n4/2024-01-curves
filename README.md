@@ -1,32 +1,3 @@
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [x] Create a PR to this repo with the below changes:
-- [x] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [x] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 48 business hours prior to audit start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the audit — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the audit. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
-
----
-
-## ⭐️ Sponsor: Edit this `README.md` file
-
-- [ ] Modify the contents of this `README.md` file. Describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-- [ ] Review the Gas award pool amount. This can be adjusted up or down, based on your preference - just flag it for Code4rena staff so we can update the pool totals across all comms channels.
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] [This checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746) provides some best practices for Code4rena audits.
-
-## ⭐️ Sponsor: Final touches
-- [ ] Review and confirm the details in the section titled "Scoping details" and alert Code4rena staff of any changes.
-- [ ] Check that images and other files used in this README have been uploaded to the repo as a file and then linked in the README using absolute path (e.g. `https://github.com/code-423n4/yourrepo-url/filepath.png`)
-- [ ] Ensure that *all* links and image/file paths in this README use absolute paths, not relative paths
-- [ ] Check that all README information is in markdown format (HTML does not render on Code4rena.com)
-- [ ] Remove any part of this template that's not relevant to the final version of the README (e.g. instructions in brackets and italic)
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
 
 # Curves audit details
 - Total Prize Pool: $36,500 in USDC
@@ -52,40 +23,65 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
-[ ⭐️ SPONSORS: Are there any known issues or risks deemed acceptable that shouldn't lead to a valid finding? If so, list them here. ]
-
 
 # Overview
 
-[ ⭐️ SPONSORS: add info here ]
 
-## Links
+## Scoping detail
 
-- **Previous audits:** 
-- **Documentation:**
-- **Website:**
-- **Twitter:** 
-- **Discord:** 
+The audit will encompass the following files, each integral to the functioning of the protocol:
+
+1. **Curves.sol**: This is the primary file of the Curves protocol. It contains the core logic and functions that define the overall behavior and rules of the system. This file started as a fork of friend.tech FriendtechSharesV1.sol
+
+2. **CurvesERC20.sol**: This file defines the ERC20 token that will be created upon exporting a Curve token. It outlines the token's properties and behaviors consistent with the ERC20 standard.
+
+3. **CurvesERC20Factory.sol**: Serving as an ERC20 factory, this file abstracts the logic for ERC20 token creation. Its primary purpose is to streamline the token creation process and reduce the overall footprint of the protocol, ensuring efficiency and scalability.
+
+4. **FeeSplitter.sol**: This script manages the distribution of fees. It is responsible for the fair and accurate division of transaction fees amongst token holders, in line with the protocol's incentive structure.
+
+5. **Security.sol**: This file standardizes the security criteria for the protocol. It includes protocols and measures designed to safeguard the system against vulnerabilities and ensure compliance with established security standards.
+
+Each of these files plays a crucial role in the protocol’s architecture and functionality. The audit will methodically evaluate them for security, efficiency, and adherence to best practices in smart contract development.
+
+## Summary
+
+The Curves protocol, an extension of friend.tech, introduces several innovative features. For context on friend.tech, consider this insightful article: [Friend Tech Smart Contract Breakdown](https://medium.com/valixconsulting/friend-tech-smart-contract-breakdown-c5588ae3a1cf). Key enhancements in the Curves protocol include:
+
+1. Token Export to ERC20: This pivotal feature allows users to transfer their tokens from the Curves protocol to the ERC20 format. Such interoperability significantly expands usability across various platforms. Within Curves, tokens lack decimal places, but when converted to ERC20, they adopt a standard 18-decimal format. Importantly, users can seamlessly reintegrate their ERC20 tokens into the Curves ecosystem, albeit only as whole, integer units.
+
+2. Referral Fee Implementation: Curves empowers protocols built upon its framework by enabling them to earn a percentage of all user transaction fees. This incentive mechanism benefits both the base protocol and its derivative platforms.
+
+3. Presale Feature: Learning from the pitfalls of friend.tech, particularly issues with frontrunners during token launches, Curves incorporates a presale phase. This allows creators to manage and stabilize their tokens prior to public trading, ensuring a more controlled and equitable distribution.
+
+4. Token Holder Fee: To encourage long-term holding over short-term trading, Curves introduces a fee distribution model that rewards token holders. This fee is proportionally divided among all token holders, incentivizing sustained investment in the ecosystem.
+
+These additions by Curves not only enhance functionality but also foster a more robust and inclusive financial ecosystem.
+
+## Documentation
+There's no official friend.tech documentation but there's a lot of great articles. Here you can find some of them:
+
+[Friend Tech Smart Contracts](https://basescan.org/address/0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4#code). 
+
+[Friend Tech Smart Contract Breakdown](https://medium.com/valixconsulting/friend-tech-smart-contract-breakdown-c5588ae3a1cf). 
+
+[Understanding Friend Tech through Smart Contracts](https://ada-d.medium.com/understanding-friend-tech-through-smart-contracts-edac5d98cd49). 
+
 
 
 # Scope
 
-[ ⭐️ SPONSORS: add scoping and technical details here ]
-
-- [ ] In the table format shown below, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
 
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/Curves.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol) | 413 | | openzeppelin |
+| [contracts/FeeSplitter.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/FeeSplitter.sol) | 95 | | openzeppelin |
+| [contracts/Security.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Security.sol) | 23 | | |
+| [contracts/CurvesERC20.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/CurvesERC20.sol) | 14 | | openzeppelin |
+| [contracts/CurvesERC20Factory.sol](https://github.com/code-423n4/2024-01-curves/blob/main/contracts/CurvesERC20Factory.sol) | 8 | | |
 
 ## Out of scope
 
-*List any files/contracts that are out of scope for this audit.*
+Any file not listed in the scope above is out of scope.
 
 # Additional Context
 
@@ -106,7 +102,6 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 *Describe the project's main invariants (properties that should NEVER EVER be broken).*
 
 ## Scoping Details 
-[ ⭐️ SPONSORS: please confirm/edit the information below. ]
 
 ```
 - If you have a public code repo, please share it here: https://github.com/roll-network/curves  
@@ -130,6 +125,4 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
-
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+See [install.md](https://github.com/code-423n4/2024-01-curves/blob/main/install.md)

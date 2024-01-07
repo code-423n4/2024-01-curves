@@ -36,8 +36,8 @@ describe("Curves ERC20 test", () => {
       const keyTokenAddress = (await testContract.externalCurvesTokens(owner.address)).token;
       const keyToken = ERC20__factory.connect(keyTokenAddress, owner);
 
-      expect(await keyToken.name()).to.equal("CurvesToken #1");
-      expect(await keyToken.symbol()).to.equal("CURTOK1");
+      expect(await keyToken.name()).to.equal("Curves 1");
+      expect(await keyToken.symbol()).to.equal("CURVES1");
       expect(await keyToken.totalSupply()).to.equal(parseEther("2"));
 
       const ownerBalance = await keyToken.balanceOf(owner.address);
@@ -58,8 +58,8 @@ describe("Curves ERC20 test", () => {
 
       const tokenMetadata = await testContract.externalCurvesTokens(owner.address);
 
-      expect(await tokenMetadata.name).to.equal("CurvesToken #1");
-      expect(await tokenMetadata.symbol).to.equal("CURTOK1");
+      expect(await tokenMetadata.name).to.equal("Curves 1");
+      expect(await tokenMetadata.symbol).to.equal("CURVES1");
       expect(await tokenMetadata.token).to.be.properAddress;
 
       const reverseTokenMetadata = await testContract.externalCurvesToSubject(tokenMetadata.token);
@@ -192,7 +192,7 @@ describe("Curves ERC20 test", () => {
       await buyToken(testContract, friend, owner, 2);
       await testContract.withdraw(friend.address, 2);
 
-      const tx = testContract.buyCurvesTokenWithName(owner.address, 1, "CurvesToken #1", "CURTOK1");
+      const tx = testContract.buyCurvesTokenWithName(owner.address, 1, "Curves 1", "CURVES1");
       expect(tx).to.be.revertedWith("InvalidERC20Metadata()");
     });
 
@@ -234,8 +234,8 @@ describe("Curves ERC20 test", () => {
       const keyTokenAddress = (await testContract.externalCurvesTokens(owner.address)).token;
       const keyToken = ERC20__factory.connect(keyTokenAddress, owner);
 
-      expect(await keyToken.name()).to.equal("CurvesToken #1");
-      expect(await keyToken.symbol()).to.equal("CURTOK1");
+      expect(await keyToken.name()).to.equal("Curves 1");
+      expect(await keyToken.symbol()).to.equal("CURVES1");
     });
 
     it("Should revert if try to set name and symbol after mint", async () => {
