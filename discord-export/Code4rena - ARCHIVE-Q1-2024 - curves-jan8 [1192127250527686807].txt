@@ -1,0 +1,3418 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2024 / curves-jan8
+==============================================================
+
+[01/04/2024 14:37] knownfactc4_29311 (pinned)
+👋 Hello and welcome to the audit channel for the $36,500 in USDC **Curves** audit!
+
+📆 Audit opens 01/08/2024 20:00 (20:00 UTC) and runs through 01/16/2024 20:00 (20:00 UTC) (8 days).
+
+Please give a warm welcome to the Curves team, particularly @0xAndy and @Sid, who will be available for questions either here in the channel or via DM in the EST and GMT-3 timezones.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/audits/2024-01-curves
+
+{Reactions}
+👀 (3) 🔥 (4) 
+
+[01/04/2024 14:38] knownfactc4_29311
+Pinned a message.
+
+
+[01/08/2024 20:02] C4 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Reminder: all [Automated Findings / Publicly Known Issues](https://github.com/code-423n4/2024-01-curves?tab=readme-ov-file#automated-findings--publicly-known-issues) are out of scope and ineligible for awards.
+
+
+[01/08/2024 20:18] thebrittfactor
+Pinned a message.
+
+
+[01/08/2024 23:36] 0xandy_2014_07_22
+Hi! I'm andy from roll. Any question I will answer asap 🙂
+
+{Reactions}
+👌 (6) 
+
+[01/09/2024 00:33] manchasss.eth
+Hey @0xAndy  👋 any other documentation or previous audits?
+
+
+[01/09/2024 00:35] manchasss.eth
+I see the friend.Tech documentation as this is a fork, but, is there something specific to the protocol we could use?
+
+
+[01/09/2024 00:37] surfer_05
+Are all contracts compiling, I am getting this error about the Ownable constructor @0xAndy
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/image-0A2AF.png
+
+
+[01/09/2024 00:38] surfer_05
+And not sure if the owner address is passed to the Ownable Constructor here in CurvesERC20 file
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/image-49300.png
+
+
+[01/09/2024 00:40] 0xandy_2014_07_22
+There's no specific documentation rather the details in the Readme. As a fork you should understand friend.tech first and then you can check the changes in the readme
+
+{Reactions}
+👍 (2) 
+
+[01/09/2024 01:30] babs2833
+contracts and tests working fine here:
+
+1. git cloned the repo
+2. `yarn`
+3. `nvm use 18` (if having specific node version problems)
+4. `npx hardhat test`
+
+{Reactions}
+👌 (3) 
+
+[01/09/2024 01:48] 0xandy_2014_07_22
+maybe you are using the wrong version of Ownable. if you use the one seated in the project, it works fine because ownable is abstract and has no params on the constructor
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/Screenshot_2024-01-08_at_22.46.55-C2DB5.png
+
+{Reactions}
+👍 
+
+[01/09/2024 01:48] 0xandy_2014_07_22
+"@openzeppelin/contracts": "4.9.3"
+
+
+[01/09/2024 01:51] 0xandy_2014_07_22
+OZ release version 5 after the development of this contracts so we keep the previus stable version
+
+
+[01/09/2024 04:05] mrosas
+Hey PMed u
+
+
+[01/09/2024 05:53] Message Wolf#0225 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Automated findings output for the audit can be found [here](https://github.com/code-423n4/2024-01-curves/blob/main/bot-report.md).
+
+*Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+
+
+[01/09/2024 06:24] thekmj
+I wonder how many people submitted [H-01] already
+
+{Reactions}
+lolcry (34) 
+
+[01/09/2024 07:28] visualbits
+Is the Roll network in hardhat configs same as the Form network mentioned in readme?
+
+
+[01/09/2024 07:29] 0xstalin
+there it goes the retirement 🥲
+
+{Reactions}
+😆 (2) 
+
+[01/09/2024 08:37] nethoxa
+Oh come on, I hate bots -_-
+
+{Reactions}
+😄 (8) 
+
+[01/09/2024 09:25] petro_1912
+How can I see the status other guys already submitted?
+
+
+[01/09/2024 09:34] plamkata
+Where can we find more info on this Form Network L2?
+
+
+[01/09/2024 09:51] petro_1912
+Hi
+
+
+[01/09/2024 09:52] petro_1912
+@petro_1912
+
+
+[01/09/2024 09:52] petro_1912
+How can I check if other guys already submitted?
+
+
+[01/09/2024 10:20] 0x1118641
+i think you can't see what other people submit
+
+
+[01/09/2024 10:20] timenov
+You can’t
+
+
+[01/09/2024 10:23] catscanaudit
+What he meant is that the issue was found in the Bot Race which makes it an known issue and invalid for submission by wardens
+
+
+[01/09/2024 11:00] adeolu
+what L2 is this project on?
+
+
+[01/09/2024 11:03] plamkata
+.
+
+
+[01/09/2024 11:03] plamkata
+👆
+
+
+[01/09/2024 11:06] adeolu
+Thanks. So the  name is Form network..
+
+
+[01/09/2024 11:06] adeolu
+Any link to the form network docs?
+
+
+[01/09/2024 11:06] plamkata
+Couldn't find anything
+
+{Reactions}
+👍 
+
+[01/09/2024 11:08] adeolu
+@0xAndy @Sid
+
+
+[01/09/2024 11:25] plamkata
+Are the owner and manager trusted roles
+
+
+[01/09/2024 11:35] 0xflaming0
+Could I have a breakdown on referralFee, protocolFee, holdersFee and subjectFee?
+
+
+[01/09/2024 11:37] plamkata
+referralFee - created in case of external protocols wishing to utilize user transactions, could be used in the current context
+protocolFee - the protocol earned fees
+holderFees - fees that are evenly distributed among holders of the specific Curves based on their balance over the total balance
+subjectFees - fees paid to the Curves subject when you buy his tokens
+
+{Reactions}
+❤️ (6) 
+
+[01/09/2024 12:02] 0x1118641
+just to be sure: any finding has to assume that modifiers onlyOwner() and onlyManager() are working correctly right ?
+
+{Reactions}
+👍🏻 
+
+[01/09/2024 12:30] plamkata
+Yes
+
+{Reactions}
+❤️ 
+
+[01/09/2024 13:06] pkqs90
+The `mint()` function is protected by `onlyTokenSubject` here https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L439. May ask I is this a design choice for only allowing the owner of token (which is itself) to perform the ERC20 deploy?
+
+{Embed}
+https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol
+2024-01-curves/contracts/Curves.sol at main · code-423n4/2024-01-cu...
+Contribute to code-423n4/2024-01-curves development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/fc110e18-bbf4-47db-a58f-d2bab398a954-F3BDB
+
+
+[01/09/2024 13:21] 0xandy_2014_07_22
+yes
+
+
+[01/09/2024 13:22] 0xandy_2014_07_22
+good question.  Anybody can mint when try to do a withdrawal. In that moment the token is minted. The only one who can mint without withdrawal is the owner. The reason behind that is to allow the owner to pay the gas fee of minting the token.
+
+
+[01/09/2024 13:26] pkqs90
+Great. thanks for the clarification.
+
+
+[01/09/2024 14:00] 0xandy_2014_07_22
+we had a lot of questions about tech specifications for form network. You can check the docs here https://docs.form.network/ and check the rpc data here https://info.form.network/
+
+{Reactions}
+👍 
+
+[01/09/2024 14:09] thebrittfactor
+Pinned a message.
+
+
+[01/09/2024 14:49] babs2833
+bot finding: "[M-03] NFT minting can allow JSON Injection" we aren't dealing with erc-721 at all, its just minting erc20s?
+
+
+[01/09/2024 14:49] babs2833
+just want to make sure im not crazy or project plans to shift to nfts instead of erc20 in the future?
+
+
+[01/09/2024 14:50] 0xandy_2014_07_22
+yeap, I saw the same when I read that. we DON'T use NFTs
+
+{Reactions}
+😄 
+
+[01/09/2024 15:06] plamkata
+@0xAndy Could you shed some light on how fee distribution works. When a user buys/sells shares we have ``data.userFeeOffset[account] = data.cumulativeFeePerToken;``. Then we increase the cumulativeFeePerToken. But what do we represent here. When a user buys/sells his latest fee is saved as the previous one and then a new one is calculated?
+
+
+[01/09/2024 15:11] mrosas
+@0xAndy pmed
+
+
+[01/09/2024 15:20] visualbits
+What is roll network in hardhat configs? Is same as form network?
+I didn't find any docs about this🤔
+
+
+[01/09/2024 15:24] 0xandy_2014_07_22
+maybe it's outdated but yes, roll network and form network it's the same, you use the one in info.form.network
+
+{Reactions}
+👍 
+
+[01/09/2024 15:39] 0xandy_2014_07_22
+many people asked about the presale: if user select to enable presale the presale starts at the same moment the curve is created. and finish at the same time that open sale starts. Open sale starts at startTime. And during the presale each wallet can buy a maxBuy of tokens. That value is per wallet.
+
+{Reactions}
+❤️ (2) 
+
+[01/09/2024 16:24] joewick1
+Hey, I am kinda new to this so I am not sure if that is a dumb thing 😅 . 
+when trying to run the provided tests I get that "ERC20__factory" is undefined, and I can not actually find it exported in the "contracts/types", so did I miss something in my deployment? 
+I am deploying on hardhat localhost using the instructions in "install.md" file
+
+
+[01/09/2024 16:31] aodkgkrogrogoovg2o3btivr
+what / who exactly is ``subject``    ?  the user who interact with the protoocl ?
+
+
+[01/09/2024 16:40] aodkgkrogrogoovg2o3btivr
+``curvesTokenSubject``
+
+
+[01/09/2024 16:46] 0xandy_2014_07_22
+curvesTokenSubject is the one who creates a curve. When the `token` is in the protocol is indexed everywhere by that subject who created it
+
+
+[01/09/2024 16:51] aodkgkrogrogoovg2o3btivr
+so when i deposit ether and create curve tokens, i am the curvesTokenSubject ?
+
+
+[01/09/2024 16:55] masol_66728
+is there a protocol website
+
+
+[01/09/2024 16:55] masol_66728
+?
+
+
+[01/09/2024 16:58] 0xandy_2014_07_22
+if is the first buy of your token, yes
+
+
+[01/09/2024 16:59] 0xandy_2014_07_22
+https://info.form.network/
+
+
+[01/09/2024 17:05] masol_66728
+I meant about curves not the layer 2
+
+
+[01/09/2024 17:08] 0xandy_2014_07_22
+oh my bad, there's no formal documentation. please refer to friend.tech docs and the readme of this audit
+
+
+[01/09/2024 18:12] haxatron1
+So a user cannot have more than 1 curves token?
+
+
+[01/09/2024 18:13] babs2833
+anyone can buy as many different influencer subjects as they want. But for a specific msg.sender, we can only mint one curveTokenSubject that corresponds to ourself
+
+
+[01/09/2024 18:14] babs2833
+(I think this is the idea)
+
+
+[01/09/2024 18:14] babs2833
+the original friend.tech contract is helpful and so is understanding friend.tech on a holistic level
+
+
+[01/09/2024 18:15] haxatron1
+Ah ok i initially thought curvesTokenSubject was referring to a contract
+
+
+[01/09/2024 18:16] babs2833
+yeah i believe the equivilance is `curvesTokenSubject` = `sharesSubject` from friend.tech, where `curvesTokenSubject` is just any user who decided to make their key/share  for themselves
+
+
+[01/09/2024 18:18] 0xandy_2014_07_22
+just like alex said. your own token is only one and is indexed by your address, and is called internally curvesTokenSubject. but you can hold tokens from anybody else if you want, not only yours
+
+
+[01/09/2024 18:28] klau5_
+What is the reason for calling `_buyCurvesToken` in buyCurvesTokenForPresale? 
+This function can only be called by the subject, is it to allow the subject to buy curves first?
+
+
+[01/09/2024 18:28] 0xandy_2014_07_22
+yes
+
+{Reactions}
+👌 
+
+[01/09/2024 18:34] mike_bello90
+what is the userFeeOffset? what represent that variable?
+
+
+[01/09/2024 19:14] 0xandy_2014_07_22
+the logic of that contract is based on an accumulator pattern. you can check here https://hackernoon.com/how-to-implement-a-stake-and-reward-contract-in-solidity to get the concept
+
+
+[01/09/2024 19:52] mike_bello90
+thanks
+
+
+[01/09/2024 19:52] auditsea
+No wonder this is gonna have huge number of issues. 😂
+
+
+[01/09/2024 20:09] yashpatel2003
+Anyone using foundry for this one ? I am not able to setup !!
+
+
+[01/09/2024 20:16] alexczm
+Hey @0xAndy, I believe you missed this question. 
+If `owner` makes sense to be trusted, I wonder if `manager` is considered trusted or not.
+
+
+[01/09/2024 20:19] 0xandy_2014_07_22
+Both are trustable. Admin in the future will be a dao
+
+
+[01/09/2024 20:19] alexczm
+what about `curvesTokenSubject` ?
+
+
+[01/09/2024 20:19] 0xandy_2014_07_22
+The project is setup with hardhat. If you use foundry check the open zeppelin library version because in hardhat is set 4.9
+
+
+[01/09/2024 20:36] avoloder
+Have to admit, this friend.tech concept of increasing price while supply is also being increased is not a concept we all have been used to 😆  Have to adjust my brain for this
+
+
+[01/09/2024 20:45] 0xflaming0
+What is a curve subject?
+
+
+[01/09/2024 20:49] babs2833
+`curvesTokenSubject` is any address, it's the same as friend.tech `sharesSubject`. Anyone can buy their first share for example to get the ball rolling and have it exist within the system, and then also mint the erc20 for it if they want i think
+
+
+[01/09/2024 20:51] 0xflaming0
+So they are the first person who minted that specific curves token?
+
+
+[01/09/2024 21:09] aodkgkrogrogoovg2o3btivr
+someone can really explain what is the address of  ``curvesTokenSubject``   because the modifier ``onlyTokenSubject``   says it has to be msg.sender
+
+
+[01/09/2024 21:16] avoloder
+a person who wants to have his/her shares traded (e.g., you, me, anybode else)
+
+
+[01/09/2024 22:02] 0xflaming0
+What or Who can be whitelisted?
+
+
+[01/09/2024 23:07] 0xandy_2014_07_22
+Anyone who the creator wants. The idea behind that is I create a token and want to give to my closest followers the chance to be the first buyers of my token
+
+
+[01/09/2024 23:08] 0xandy_2014_07_22
+Yeah at the beginning is not so intuitive
+
+
+[01/09/2024 23:25] aodkgkrogrogoovg2o3btivr
+i am curious if i represented this right,  for example  the ``subjectFee``  in the tests  is ``("0.05"); // 5%``   , so if i do    ``5e16``  is   ``5%``  too ?
+
+
+[01/09/2024 23:41] mike_bello90
+yes
+
+
+[01/10/2024 01:01] poeaudits
+Which chain(s) do you anticipate deploying this to?
+
+
+[01/10/2024 01:43] 0xandy_2014_07_22
+form.network. check in the previus msgs
+
+
+[01/10/2024 01:55] mrosas
+@0xAndy I will open threads here for convenience
+
+
+[01/10/2024 02:30] poeaudits
+Is there a general flow for the contract functions that you expect?
+
+
+[01/10/2024 04:35] varun2791
+@0xAndy dmed you please check
+
+
+[01/10/2024 07:41] prathik358
+```
+    mapping(address => ExternalTokenMeta) public externalCurvesTokens;
+```
+What does externalCurvesTokens represent?
+
+
+[01/10/2024 08:22] catscanaudit
+The mapping is responsible for the MetaData of the ERC-20 Representation of a subject's curves token
+
+
+[01/10/2024 08:22] catscanaudit
+Address of deployed ERC-20 for a subject's curves token => meta data
+
+
+[01/10/2024 08:22] catscanaudit
+If I'm not mistaken
+
+
+[01/10/2024 08:25] prathik358
+does this mean that it maps address of the curve token that a user mints to its metadata?
+
+
+[01/10/2024 08:25] catscanaudit
+Yes the address of the ERC-20 implementation for a subject's curves token
+
+
+[01/10/2024 08:25] catscanaudit
+to the metadata
+
+
+[01/10/2024 08:26] prathik358
+ok got it thnx.
+
+
+[01/10/2024 09:36] 0x11singh99
+what is `curvesTokenSubject` in Curves.sol ? @0xAndy
+
+
+[01/10/2024 09:54] alexczm
+This Q was answered several times.
+ eg. https://discord.com/channels/810916927919620096/1192127250527686807/1194321289737928834
+
+
+[01/10/2024 10:36] 0x11singh99
+Thanks I missed that
+
+{Reactions}
+🤝 
+
+[01/10/2024 12:17] tadev0
+@0xAndy  just dmed you 🙂
+
+
+[01/10/2024 12:26] mangoeth
+@0xAndy sent a fr
+
+
+[01/10/2024 12:57] mrosas
+@0xAndy dmed on threads
+
+{Stickers}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/796140620111544330-F73E0.json
+
+
+[01/10/2024 13:37] themj0ln1r
+Is `protocolFee` and  all externalFees will be set right after Curves Deploy (Post Deployment)?
+
+
+[01/10/2024 14:05] zanybonzy
+Started a thread.
+
+
+[01/10/2024 14:51] mrosas
+Does anyone know the installation methods? Lots of dependencies issues
+
+
+[01/10/2024 15:01] mrosas
+Did anyone install typechain and @nomiclabs/hardhat-waffle ethereum-waffle?
+
+
+[01/10/2024 15:11] mrosas
+Hi friends, don't bother using hardhat. Let's use remix 😄
+```
+Error HH209: Redefinition of task verify:get-contract-information failed. Unsupported operation adding mandatory (non optional) param definitions in an overridden task.
+```
+
+{Reactions}
+🤡 
+
+[01/10/2024 15:22] santipu_
+@0xAndy Dm'd you
+
+
+[01/10/2024 15:35] bronze_pickaxe
+`npm install --force` worked in my case
+
+
+[01/10/2024 15:38] mrosas
+Git clone and just npm install force?
+
+
+[01/10/2024 15:38] mrosas
+Was debugging for quite some time now hope it works
+
+
+[01/10/2024 15:40] bronze_pickaxe
+yeah that did the trick for me
+
+
+[01/10/2024 15:45] 0xandy_2014_07_22
+I install it several times from the scratch and always works, but I recommend to use `yarn` instead of `npm`
+
+
+[01/10/2024 15:54] 0xandy_2014_07_22
+thanks for answer, and yes, is that
+
+
+[01/10/2024 16:04] fktworld
+curvesTokenSubject is equivalent to an administrator, right?
+
+
+[01/10/2024 16:09] 0xandy_2014_07_22
+curvesTokenSubject is the owner of a single Curve. it's the token creator for a given token
+
+
+[01/10/2024 16:10] fktworld
+Creator of the token
+
+
+[01/10/2024 16:10] fktworld
+thanks
+
+
+[01/10/2024 16:11] tadev0
+@0xAndy  did you receive my dm?
+
+
+[01/10/2024 16:13] 0xandy_2014_07_22
+please create a thread, is difficult to track dm
+
+
+[01/10/2024 16:24] themj0ln1r
+@0xAndy
+
+
+[01/10/2024 16:25] 0xandy_2014_07_22
+yes
+
+
+[01/10/2024 16:36] 0xstalin
+just run `yarn`
+
+
+[01/10/2024 16:38] fktworld
+https://github.com/code-423n4/2024-01-curves/blob/main/install.md
+
+{Embed}
+https://github.com/code-423n4/2024-01-curves/blob/main/install.md
+2024-01-curves/install.md at main · code-423n4/2024-01-curves
+Contribute to code-423n4/2024-01-curves development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/fc110e18-bbf4-47db-a58f-d2bab398a954-F3BDB
+
+
+[01/10/2024 16:38] fktworld
+Installation tutorial
+
+
+[01/10/2024 16:46] 0xandy_2014_07_22 (pinned)
+Token Subject: The Token Subject is the individual who creates a new Curve Token. This is done by purchasing the first token. The internal identifier of the token is the same as the address of its creator, which is why all maps are indexed by the token subject. A Token Subject can own a unique token of their own, although they can possess any number of units of the same token. They can also buy tokens from other people.
+
+buyCurvesTokenWithName and buyCurvesTokenForPresale: There are various entry points for creating a token. To maintain the syntax of friend.tech, we call them `BuyToken...`, but they actually refer to CREATING a token, and can be called only once per Token Subject.
+
+Presale: This is one of the special cases of BuyToken. If presale is chosen, a merkle root and a start period must be indicated. The presale begins at the same moment the buy token is called and ends when the open sale starts. The open sale begins at the indicated start period. The merkle root can be updated if no one has yet bought tokens in the presale, but to keep the game fair, it cannot be changed once purchases have begun.
+
+FeeSplitter: The purpose of FeeSplitter is to distribute fees among all token holders. Only those token holders who have kept their tokens within the protocol are considered, and not those who have exported them to ERC20. The reason for this is that many tokens will likely be locked in uniswap pools, bridge lockers, etc., so those fees would be lost. We consider it better to utilize them for the users.
+
+{Reactions}
+❤️ (3) 
+
+[01/10/2024 16:46] 0xandy_2014_07_22 (pinned)
+Price: The price is calculated internally; there is no external price. The price is determined by a quadratic function which causes the price to increase as the number of tokens increases. It is the same function used by friend.tech, and for more reference, you can see the links in the readme.
+
+Referral: The referral is someone who will receive a certain fee for each transaction of a token that was created indicating their address as the referral. If no referral is indicated, that fee goes to the protocol. It is valid for a person to set themselves as their own referral.
+
+Network: The protocol will only be found on form.network. It is an L2 network built on the Optimism Superchain. For more information, visit https://docs.form.network/ and https://info.form.network/.
+
+{Reactions}
+❤️ (4) 
+
+[01/10/2024 16:47] 0xandy_2014_07_22
+there's a summary of all the frequent questions, please the one who where working and helping here ping me if you feel there's some question I answer this days here or in private and is not in the list
+
+
+[01/10/2024 16:51] itsmetechjay
+Pinned a message.
+
+
+[01/10/2024 16:51] itsmetechjay
+Pinned a message.
+
+
+[01/10/2024 18:01] aslanbekaibimov
+anyone encountered issues with the set up? this is what i get after `git clone` and `yarn`
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/image-99B0C.png
+
+
+[01/10/2024 18:11] jacobmartin0406
+@0xAndy  created thread, plz check
+
+
+[01/10/2024 19:13] 0xflaming0
+@0xAndy dm
+
+
+[01/10/2024 19:53] jovemjeune
+Actually I encountered that issues.Here is how I solved them in linux: I opened a new terminal and get root permissions as submitting su command than I submited following command : "yarn set version 4.0.0" after I did these steps the problem resolved for me. My linux distro was  ubuntu.
+
+
+[01/10/2024 19:57] aslanbekaibimov
+didnt work on ubuntu22.04 wsl2, but thanks anyways 🙂
+
+upd deleted yarn.lock and it worked
+
+
+[01/10/2024 20:03] jovemjeune
+You are welcome 🙂Actually I set ubuntu on a virtual machine via oracle vm virtual box and image of the following version 22.04 LTS in my case.
+
+
+[01/10/2024 20:27] 0xprinc
+@0xAndy dmed you, please check
+
+
+[01/10/2024 20:35] ivand5690
+@0xAndy or anyone, why does the withdraw method deploys an ERC20 token with _deployERC20?  Can someone explain it? If it doesn´t exist how can it be withdrawn?
+
+
+[01/10/2024 20:42] tadev0
+withdraw function here means converting the token subject into an ERC20 equivalent. Hence, the first call to withdraw will deploy the ERC20 contract, lock the amount of subject token in Curves contract, and mint erc20 token on the withdrawer address
+
+
+[01/10/2024 20:43] tadev0
+`deposit` function does the opposite, it converts ERC20 tokens (by burning them) into the subject token, which are unlocked and given back to their owner.
+
+
+[01/10/2024 20:49] ivand5690
+Thank you! Just something else which confuses me. When I buy someones's token (subjectToken), I deposit ethers into the Curve contract and this ethers are converted to ERC20 from this subject?
+
+
+[01/10/2024 20:53] tadev0
+no ether you send is never converted to another cryptocurrency
+
+
+[01/10/2024 20:55] ivand5690
+yes yes, I mean not directly converted but lets say for 1 ether you get 100 ERC token of someone´s token
+
+
+[01/10/2024 20:56] tadev0
+not really
+
+
+[01/10/2024 20:58] tadev0
+ether you send to Curves stays in the contract mainly, and some % will go the different destinations (see FeesEconomics) . and of course people that sell subject tokens will get back eth
+
+
+[01/10/2024 20:58] tadev0
+but yeah when you send eth to the contract, you get subject tokens in exchange. then, if you want, you can lock them in Curves and obtain the ERC20 equivalent tokens
+
+
+[01/10/2024 20:59] ivand5690
+thank you mate, it makes more sense now, will keep researching it now, hope it gets even more clear 🙏
+
+{Reactions}
+👌 
+
+[01/11/2024 01:33] themj0ln1r
+Can anyone elaborate more about the main invariant. Which two tokens totalsupply should maintain one to one correspondence?
+
+
+[01/11/2024 02:49] 0xblackskull
+can anyone tell me on which blockchain this gonna deploy?
+
+
+[01/11/2024 02:53] nuthan1159
+totalsupply of erc20 token (which is external) == curvesTokenBalance(that token subject, address(curves))
+
+whatever locked in, should be total minted
+
+{Reactions}
+❤️ 
+
+[01/11/2024 02:54] jvorex
+https://docs.form.network/
+
+{Embed}
+https://docs.form.network/
+Introducing Form - Form Testnet Docs
+Get started on Form Testnet by adding to Metamask, receiving faucet funds, and deploying smart contracts.
+
+{Reactions}
+👍 
+
+[01/11/2024 04:57] catscanaudit
+Did anyone succeed in creating a Forge test environment and setting it up successfully?
+
+
+[01/11/2024 04:57] catscanaudit
+I'm getting errors for remappings on @ensdomains when I don't think any of the protocol contracts even inherits it
+
+
+[01/11/2024 04:57] catscanaudit
+Deleting it from remappings doesn't work either
+
+
+[01/11/2024 05:10] zhaojie
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/image-0E137.png
+
+{Reactions}
+👍 
+
+[01/11/2024 05:11] zhaojie
+Above is my configuration, no remappings.
+
+
+[01/11/2024 05:38] catscanaudit
+Fixed it issue was I had 2 remappings one in root one in foundry environment and then compiler threw but somehow fixed too
+
+
+[01/11/2024 07:06] ev_om
+@0xAndy DM'd you in a thread
+
+
+[01/11/2024 07:10] prathik358
+what is the use of `Curves::deposit` function?
+
+
+[01/11/2024 07:45] catscanaudit
+When a user withdraws a subject token it is minted as ERC-20 token whilst the internal accounting is subtracted, with deposit you burn the ERC-20 and increase the internal accounting again
+
+
+[01/11/2024 07:48] prathik358
+so basically its just used to convert external erc20 to subjectToken?
+
+
+[01/11/2024 08:06] senyab
+what is the difference between subjectToken and externalToken?
+
+
+[01/11/2024 08:07] senyab
+i don't understand also how it transfer in the deposit/withdraw function if the curvesTokenSubject is s the owner of a single Curve, not the token itself
+
+
+```
+_transfer(curvesTokenSubject, msg.sender, address(this), amount);
+```
+
+
+[01/11/2024 08:15] 0xstalin
+subjectToken is any user who has minted a curveToken of his own and can offer other users to buy his token
+an externalToken is an ERC20 token of a curveToken from a subjectToken.
+
+
+[01/11/2024 08:16] 0xstalin
+_transfer() of the curves contract transfers curveTokens, not externalTokens
+
+
+[01/11/2024 08:25] catscanaudit
+They are both subject token balance, one is in ERC format other is internally accounted
+
+
+[01/11/2024 09:13] senyab
+what is the usability of external token? What is serves for?
+
+
+[01/11/2024 09:13] catscanaudit
+So you can trade them as ERC20
+
+{Reactions}
+🤝 
+
+[01/11/2024 09:13] catscanaudit
+If you wish
+
+
+[01/11/2024 09:15] senyab
+So I am a user, i want to create my token, i create the subjectToken, and if this token thorough the time gain the value, i can withdraw it, and receive the noremal (external) token and sell it somewehere
+
+
+[01/11/2024 09:16] senyab
+?
+
+
+[01/11/2024 09:16] catscanaudit
+You can sell it inside the protocol without having to mint it as ERC-20 as well
+
+
+[01/11/2024 09:17] catscanaudit
+It would probably be hard for external protocols to track and value each different ERC20 subject token
+
+
+[01/11/2024 10:28] astha0211
+@0xAndy  DM'd you
+
+
+[01/11/2024 10:32] haxatron1
+Just in case anyone is wondering regarding the price function:
+n(n+1)(2n+1)/6 = 1^2 + 2^2 + ... + n^2
+
+
+[01/11/2024 10:33] haxatron1
+This essentially means that the current price of 1 token is (totalSupply^2) units.
+
+{Reactions}
+👍 (3) 
+
+[01/11/2024 11:51] avoloder
+In the function _transferFees if the firstDestination is msg.sender since it is a sellValue, who is paying this value to the msg.sender? Where does money come from? Contract owner or the contract itself? Normally it is the one who created the contract, but I am not sure I understood the function correctly.
+
+
+[01/11/2024 12:06] 0xsl1
+user is selling his tokens, so he gets back the price minus the fee
+
+
+[01/11/2024 12:07] nayan1790
+I think it's sent from the protocol contract bcoz when user buys the token the `msg.value > price + totalFee` and after sending the fees the remaining `price` is in the contract so when the user calls `sellToken` he/she gets paid from the remaining `price`
+
+
+[01/11/2024 12:09] 0xsl1
+it's actually done the same way as in friend.tech, the only difference being that in friend.tech contract it is done directly in sellShares function, while here _transferFees is responsible for that
+
+
+[01/11/2024 12:20] 0xbtk
+@0xAndy dmed you in a thread
+
+
+[01/11/2024 12:26] nmirchev8
+Guys, can someone explain `userFeeOffset` and `cumulativeFeePerToken`
+
+
+[01/11/2024 12:33] 0xflaming0
+I would also like to know
+
+
+[01/11/2024 12:39] 0xsl1
+As far as I get it, it should work like this:
+Let's say that no fees were yet distributed to token holders, so data.cumulativeFeePerToken is 0. Then there is _transferFees call, that should transfer fees to Alice, since she is a token holder. _transferFees calls `feeRedistributor.onBalanceChange(curveTokenSubject, Alice)`, which sets Alice.userFeeOffset to current data.cumulativeFeePerToken (which is 0 at this point), then immediatelly `feeRedistributor.addFees()` is called, which increases data.cumulativeFeePerToken by a `msg.value / totalSupply`, which distirbutes the fee proportionally for each token in circulation. Then `getClaimableFees` will return the amount of fees for Alice, as `cumulativeFeePerToken - userOffset (0 at this point) * balanceOf(alice)`
+
+{Reactions}
+✅ (5) 
+
+[01/11/2024 12:39] 0xsl1
+And the process repeats itself for every fee distribution
+
+
+[01/11/2024 12:41] nmirchev8
+Thank you, seer! 🔥
+
+{Reactions}
+hi5 
+
+[01/11/2024 12:47] 0xflaming0
+so `userFeeOffset` is the valuation of the tokens the user has before theyve claimed fees, then at which point it is updated to the most recent token value?
+
+
+[01/11/2024 12:49] 0xsl1
+in the call to onBalanceChange in the transferFees it will always be set to a cumulativeFeePerToken before the latter is updated
+
+{Reactions}
+❤️ (2) 
+
+[01/11/2024 12:49] 0xflaming0
+Thank you! 🫡
+
+{Reactions}
+👍 
+
+[01/11/2024 13:16] nmirchev8
+Fee percentages are as follows -> `1e18 = 100%`?
+
+
+[01/11/2024 13:22] avoloder
+What I didn't get is, if the payment is done from the contract (which is storing value just like friend.tech contract which has couple of millions in the contract itself). I couldn't tell who is the "from" address in this case and how much money does this "from" address hold?
+
+
+[01/11/2024 13:22] 0xsl1
+https://discord.com/channels/810916927919620096/1192127250527686807/1194975984189964340
+
+
+[01/11/2024 14:29] plamkata
+yes
+
+{Reactions}
+✅ 
+
+[01/11/2024 14:30] plamkata
+That's forked from friends.tech too
+
+
+[01/11/2024 14:30] prathik358
+Is `_curvesTokenCounter` variable used to keep a track of the total number of external tokens that users have generated?
+
+
+[01/11/2024 15:46] nonseodion
+n is totalSupply right?
+
+{Reactions}
+✅ 
+
+[01/11/2024 16:25] 0x1118641
+I guess the onlyManager role in FeeSplitter will only be given to the Curves contract right ?
+
+
+[01/11/2024 16:33] 0xandy_2014_07_22
+that's correct
+
+
+[01/11/2024 16:37] nayan1790
+@0xAndy DM'd you
+
+
+[01/11/2024 16:39] dimulski
+Is there a parallel competition about who is going to ask the most obvious thing as well, if so I would like to participate as well
+
+{Reactions}
+😂 (15) 
+
+[01/11/2024 17:23] 0xandy_2014_07_22
+friendly reminder: I try to answer all the messages, but I wrote a FAQs and is pinned, so read that before post, that helps me a lot and helps you because I can focus on the questions that I didn't answer before
+
+
+[01/11/2024 17:23] 0xandy_2014_07_22
+thanks!
+
+
+[01/11/2024 17:37] nonseodion
+I am still curious how these equations are equal. Any pointers to where it is explained would be great.
+
+
+[01/11/2024 17:48] 0xandy_2014_07_22
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/Screenshot_2024-01-11_at_12.47.59-CC822.png
+
+{Reactions}
+10_10 (2) ✅ 
+
+[01/11/2024 17:50] nonseodion
+Thanks
+
+
+[01/11/2024 18:20] dimulski
+we have a strong contender
+
+{Reactions}
+🤣 (3) 
+
+[01/11/2024 18:57] zxriptor
+@0xAndy how important are fees for the Curves protocol? C4 rules say loss of fees must have Low/QA severity but I am not sure, I'd rather say it could be Medium in some cases. What do you think?
+
+
+[01/11/2024 18:58] 0xandy_2014_07_22
+Low IMO
+
+{Reactions}
+✅ 
+
+[01/12/2024 04:11] thekmj
+There's even a general formula for the sum of first any powers if you want to be extra curvy <https://en.wikipedia.org/wiki/Faulhaber%27s_formula>
+
+{Reactions}
+❤️ 
+
+[01/12/2024 04:52] franklin4121
+Hi guys, 
+
+i keep getting this error 
+`error @truffle/interface-adapter@0.5.37: The engine "node" is incompatible with this module. Expected version "^16.20 || ^18.16 || >=20". Got "18.12.0"
+error Found incompatible module.` 
+
+even tho node version specified in the package.json is 18.12.0, also used nvm to switch to specified version still the same
+
+
+[01/12/2024 05:05] franklin4121
+`Npm install --force` worked for me, incase anyone runs into same issue
+
+
+[01/12/2024 08:00] poeaudits
+Is there a way to get yarn to work with foundry? In my tests I keep getting:
+```
+Source "forge-std/Test.sol" not found: File outside of allowed directories.
+```
+
+
+[01/12/2024 09:11] 0xprinc
+@0xAndy can you please see my DM. Thanks
+
+
+[01/12/2024 09:58] sovaslava9
+@0xAndy  check please private thread with me
+
+
+[01/12/2024 11:01] developerjordy
+https://book.getfoundry.sh/config/hardhat#adding-foundry-to-a-hardhat-project
+
+{Embed}
+https://book.getfoundry.sh/config/hardhat
+Foundry Book
+A book on all things Foundry
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/card-E9D38.png
+
+
+[01/12/2024 11:03] developerjordy
+used npm to install
+
+fooundry.toml:
+```
+[profile.default]
+src = 'contracts'
+out = 'out'
+libs = ['node_modules', 'lib']
+test = 'test/foundry/'
+cache_path  = 'cache_forge'
+
+[fuzz]
+runs = 5000
+
+[invariant]
+runs = 1000
+depth = 100
+```
+
+remappings.txt:
+```
+@forge-std/=lib/forge-std/
+@openzeppelin/=node_modules/@openzeppelin/
+@contracts/=contracts/
+```
+
+my test folder:
+test/foundry/Contract.t.sol
+
+
+[01/12/2024 14:23] cosine_function
+@0xAndy What is the reason behind the design choice that only holders of the internal subject tokens receive fees and holders of the external ERC-20 version do not?
+
+
+[01/12/2024 14:34] 0xandy_2014_07_22
+Most of the erc20 will be in uniswap pools or bridge vaults then is a waste of eth pay fees to them
+
+
+[01/12/2024 14:35] cosine_function
+thank you!
+
+
+[01/12/2024 15:48] fedebianu
+try yarn set version 3.6.4
+
+
+[01/12/2024 17:13] catscanaudit
+@0xAndy boss could you answer one more question in the thread
+
+
+[01/12/2024 17:51] tychaios.
+So `buyCurvesTokenWithName` is just a convenient way to buy the first subject share and create the ERC20 in a single tx, right?
+
+
+[01/12/2024 17:55] ev_om
+yup
+
+{Reactions}
+🫡 
+
+[01/12/2024 18:14] maroutis
+@0xAndy sent you a message in private thread ty!
+
+
+[01/12/2024 18:21] 0xprinc
+@0xAndy  sent you a private message in private thread
+
+
+[01/12/2024 18:22] 0xprinc
+Thanks
+
+
+[01/12/2024 20:55] unusual_byte
+@0xAndy dm on private thread
+
+
+[01/12/2024 22:14] poeaudits
+I can do it with npm, just yarn doesn't seem to work the same.
+
+
+[01/13/2024 05:45] smbv_1923
+i have added my secondary address for payment after the contest had ended so if i win some rewards it would get transferred to secondary address right?
+
+
+[01/13/2024 05:49] catscanaudit
+https://discord.com/channels/810916927919620096/810931711609143326
+
+
+[01/13/2024 05:49] catscanaudit
+And, the contest has not ended yet
+
+
+[01/13/2024 09:12] donkicha
+Hello guys!
+
+I had issue trying to run `slither`
+
+Can someone guide me how to run it successfully?
+
+Thank you in advance!
+
+It just stays like that:
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/Screenshot_385-20451.png
+
+
+[01/13/2024 09:15] donkicha
+It stays like that for hours...
+
+
+[01/13/2024 10:30] mrudenko
+@0xAndy please read dm
+
+
+[01/13/2024 10:44] developerjordy
+once installed with npm, why do you need yarn?
+
+
+[01/13/2024 13:24] peritoflores
+What is supposed to be userFeeOffset?
+
+
+[01/13/2024 15:01] nmirchev8
+Calaculate pending reward fees for each user based on `userFeeOffset` and `totalCumulative`
+
+{Reactions}
+👍 
+
+[01/13/2024 16:09] cholakovv
+@0xAndy can you check dm pls
+
+
+[01/13/2024 18:53] canttrustthem
+@0xAndy Could you check thread message? Thanks:)
+
+
+[01/13/2024 20:32] tumelo_crypto
+When a token holder sells a few tokens when is the Eth transferred to the seller, I don’t see any logic to send Eth to the seller in the sellCurvesToken function
+
+
+[01/13/2024 23:10] osmanozdemir1
+It’s in the _transferFees function
+
+
+[01/13/2024 23:12] tumelo_crypto
+Doesn’t that only transfer the fees though and not the whole sellers amount?
+
+
+[01/13/2024 23:14] osmanozdemir1
+Nope, if isBuy is false, the `firstDestination` address is `msg.sender`
+
+And it transfers the `sellValue`, which is price - totalFees, to the msg.sender
+
+
+[01/13/2024 23:15] tumelo_crypto
+Yes I just looked again now and saw it, thanks🙏🏽 don’t know how I missed that😅
+
+{Reactions}
+🫡 
+
+[01/13/2024 23:16] osmanozdemir1
+We all miss many things 😄
+
+{Reactions}
+😄 
+
+[01/13/2024 23:16] osmanozdemir1
+Don’t worry 🫡
+
+
+[01/14/2024 00:17] poeaudits
+The curves team recommended using yarn over npm for this so I'd rather follow their recommendations when working on their project.
+
+
+[01/14/2024 07:41] 0x11singh99
+fee in buying and fee in selling both cases user need to pay fees. Is this intended ? @0xAndy
+
+
+[01/14/2024 08:12] 0x11singh99
+what is the extra/different intended business logic in Curves which is not in friend.tech ? 
+What Curves extra intend to do which frind.tech doesn't ?  @0xAndy
+
+
+[01/14/2024 08:18] catscanaudit
+You can take a look at the provided friend.tech explanation articles on the contest documentation
+
+
+[01/14/2024 08:18] catscanaudit
+The original code is quite small and simple, deduce the differences between the two and you will see the new upgraded functionality
+
+
+[01/14/2024 08:20] catscanaudit
+For example fee distribution through Fee Splitter is absent in friends.tech as well as minting your Curves Subject Token in ERC20 standard
+
+
+[01/14/2024 08:21] 0x11singh99
+I have seen that. I just want to know intended docs type what the protocol want to achieve..So I can verify in code are they acheiving that or not .
+
+
+[01/14/2024 08:21] catscanaudit
+I understand
+
+
+[01/14/2024 08:23] catscanaudit
+I think the Summary section on the contest page outlines what the key intended enhancements are in 4 points
+
+
+[01/14/2024 08:23] catscanaudit
+That might be of help to you
+
+{Reactions}
+👍 
+
+[01/14/2024 09:43] 0xstriker
+in the Curves contract in the function withdraw after decreasing the amount from the user and calling the mint() function to mint erc20 tokens, how will those erc20 tokens have value, and why doesn't it directly send the intended amount to the user with a low level call instead of minting erc20 tokens@0xAndy
+
+
+[01/14/2024 10:05] thekmj
+They can be traded/lent/whatever, there are countless utilities for an ERC20 token is there not?
+
+You can also deposit the full ERC20 amount back to burn and get back your original Curves balance amount.
+
+About why it doesn't send with a call, Curves holds no tokens, what other way is there than to mint?
+
+
+[01/14/2024 10:13] 0xstriker
+I might be wrong but just saying, the Curves contract holds all the values sent to it, I am saying when a user withdraws a certain amount why does the contract not send back his intended value back in eth with a call to the user
+
+
+[01/14/2024 10:15] 0xsl1
+withdraw does not act as a sell mechanism, it's way to convert Curves token to an ERC20 equivalent. When user calls sellCurvesTokens he will get back his ETH
+
+
+[01/14/2024 10:17] thekmj
+That's true. To be more clear.
+
+If you buy tokens through `buyCurvesToken()`, then you don't get any ERC20 yet, but you get one token to your balance in Curves (or whatever amount you bought)
+
+If you want to convert that token to ERC20, then you call `withdraw()`. Conversely `deposit()` to convert ERC20 back to Curves balance.
+
+If you want to get back ETH instead, then you call `sellCurvesTokens()`
+
+{Reactions}
+✅ 
+
+[01/14/2024 10:20] 0xstriker
+in the sellCurvesTokens() function the user amount is deducted and fees are sent but there is no logic for sending back value to the user so how will the user get his value back
+
+
+[01/14/2024 10:20] 0xsl1
+_transferFees is called inside sellCurvesTokens which transfers back ETH through a low-level call
+
+{Reactions}
+👍 
+
+[01/14/2024 10:21] thekmj
+It's a bit confusing but this block transfers funds back to the user in the selling case
+
+<https://github.com/code-423n4/2024-01-curves/blob/main/contracts/Curves.sol#L228-L234>
+
+{Reactions}
+👍 
+
+[01/14/2024 10:22] 0xstriker
+oh yeah it totally slipped my mind thanks guys
+
+
+[01/14/2024 10:33] ubl4nk
+@0xAndy `maxBuy` is per user during PreSale ?
+
+
+[01/14/2024 10:47] robel102
+@0xAndy check dm 🙂
+
+
+[01/14/2024 13:07] catscanaudit
+Yep
+
+
+[01/14/2024 13:08] catscanaudit
+Thats what dev told me
+
+{Reactions}
+👍 
+
+[01/14/2024 22:12] 0xbtk
+@0xAndy check thread please
+
+
+[01/14/2024 22:59] tumelo_crypto
+Will the protocol make use of invite codes similar to friend.tech?
+
+
+[01/14/2024 23:49] polthedev
+How the fees are set up? I.e.: 3 = 3%?
+
+
+[01/14/2024 23:57] tumelo_crypto
+Also want to ask what will be the expected fee percentages upon launch?
+
+
+[01/15/2024 00:47] fktworld
+The price formula is similar.
+
+
+[01/15/2024 00:47] fktworld
+It is a quadratic function.
+
+
+[01/15/2024 00:52] tumelo_crypto
+Im not talking about the price formula, I was referring to how users will access the platform since friend.tech only allowed people with invite codes to begin buying and selling shares
+
+
+[01/15/2024 00:53] fktworld
+According to my understanding of the code, the recommendation mechanism
+
+
+[01/15/2024 01:52] tumelo_crypto
+Okay thanks
+
+
+[01/15/2024 03:56] xors33r
+0.03 eth is 3% the total is divided by 1 eth
+
+
+[01/15/2024 03:58] xors33r
+but i didn't find it defined in the tests so i just assumed that
+
+
+[01/15/2024 04:22] fktworld
+3*1e16/1e18
+
+
+[01/15/2024 05:18] catscanaudit
+3e16 is 3%
+
+
+[01/15/2024 07:45] _polex
+Offtopic: how can I create a dropdown of a chunk of code in a submition? For example a dropdown that says PoC test and when you click you get the code. I successfully done it in an md file but in the c4 submition tab, the preview does not work as I expect. The code I used is:
+```
+<details>
+<summary>Foundry setup</summary>
+Code
+</details>
+```
+
+Does someone know?
+
+
+[01/15/2024 08:08] ev_om
+If it works on GitHub, it will work once submitted. What matters is how your submission renders on GH, not in the C4 preview
+
+
+[01/15/2024 08:46] sovaslava9
+Hello. Anybode got response from sponsors in last 3 days?
+
+{Reactions}
+same (8) 
+
+[01/15/2024 10:07] 0xstriker
+in the Curves contract the function buyCurvesTokenWithName() covers buying the specified amount and mints the erc20 token with the symbol and the name to the curvesTokenSubject while having this function what is the need for the functions setNameAndSymbol() and mint() which does the same thing as the buyCurvesTokenWithName() function but in two different functions. can someone explain
+
+
+[01/15/2024 10:24] catscanaudit
+You answered yourself
+
+
+[01/15/2024 10:24] catscanaudit
+Same as getSellPrice used getFees for getSellPriceAfterFees
+
+
+[01/15/2024 10:25] catscanaudit
+Its an additional function that just bundles 2 together
+
+{Reactions}
+👍 (3) 
+
+[01/15/2024 10:59] mctoady
+Also looking for clarity on what the base set up of all the different fees are (and why they aren't set up in the constructor)
+
+
+[01/15/2024 11:48] mrpotatomagic
+@0xAndy please check private thread
+
+
+[01/15/2024 11:53] bjorn_bug
+@0xAndy please check private thread
+
+
+[01/15/2024 12:15] 0xsilvermist
+@0xAndy  please check private thread
+
+
+[01/15/2024 12:27] sovaslava9
+Sponsors are offline 4 days..
+
+{Reactions}
+cry (7) 
+
+[01/15/2024 12:50] forkforkdog
+Any high findings already?
+
+
+[01/15/2024 12:54] sovaslava9
+sure
+
+
+[01/15/2024 12:59] aslanbekaibimov
+the one from the bot race 😄
+
+{Reactions}
+😂 (11) 🤣 (4) 
+
+[01/15/2024 13:11] sovaslava9
+So bot will take all rewards for h/m )
+
+
+[01/15/2024 14:06] 0xhelium
+I don't think it works like this
+
+
+[01/15/2024 14:12] catscanaudit
+Im pretty sure a lot of people will have found Hs on this contest
+
+{Reactions}
+👀 (9) 
+
+[01/15/2024 14:19] nethoxa
+Yeah
+
+
+[01/15/2024 14:20] 0xsl1
+im surpised how much you can squeeze out of a seemingly small codebase
+
+{Reactions}
+C4Keycap (2) 💯 
+
+[01/15/2024 14:46] polthedev
+Does that means the contest might be closed if they don't respond?
+
+
+[01/15/2024 15:00] 0xsl1
+no, it just means that wardens don’t get answered with their questions
+
+
+[01/15/2024 15:33] 0xsl1
+@Soul22 thread is not private
+
+
+[01/15/2024 15:35] hisoul22
+🤣
+
+
+[01/15/2024 15:35] hisoul22
+oppp
+
+
+[01/15/2024 15:35] hisoul22
+@sl1 thanks
+
+
+[01/15/2024 15:35] 0xsl1
+happens to the best, np
+
+
+[01/15/2024 21:54] ivand5690
+can someone help please, when exactly is onBalanceChange used?
+
+
+[01/15/2024 22:24] tumelo_crypto
+_transferFees function after success3
+
+
+[01/15/2024 23:50] joewick1
+what happens when more than one find the same issue?
+
+
+[01/16/2024 01:12] tumelo_crypto
+They split the awards for that specific bug according to some formula the team has
+
+
+[01/16/2024 01:12] tumelo_crypto
+By team I mean the code4rena team
+
+
+[01/16/2024 02:39] thekmj
+<https://docs.code4rena.com/awarding/incentive-model-and-awards>
+
+
+[01/16/2024 06:38] dimulski
+there is a duel to the death, the last man standing keeps everything
+
+{Reactions}
+😂 (9) 
+
+[01/16/2024 07:00] c0pp3rscr3w3r
+If lots find it, Get nothing, similar to nextGen
+
+
+[01/16/2024 08:24] baice8614
+Hello, @0xAndy  Dmed
+
+
+[01/16/2024 09:45] kodak_rome
+..
+
+
+[01/16/2024 10:29] pxng0lin
+**QQ: Are fees paid in ETH or the token its related to??**
+
+
+[01/16/2024 10:56] catscanaudit
+Did you try looking at the code
+
+{Reactions}
+🍿 (11) 🧂 
+
+[01/16/2024 11:04] tumelo_crypto
+Eth
+
+{Reactions}
+👍 
+
+[01/16/2024 11:21] pxng0lin
+Thanks, that confirms my thoughts, wanted to double check. Appreciated.
+
+
+[01/16/2024 12:03] 0xarshia
+@0xAndy  can you check your dm andy.
+
+
+[01/16/2024 12:26] dimulski
+The guy probably needs 2 weeks away from social media and discord after all the dms he received in this contest
+
+{Reactions}
+😂 (4) 
+
+[01/16/2024 12:34] kartoonjoy
+Hi wardens, lets keep the conversation productive, please. We are attempting to bring the sponsor back into the channel to answer questions. Thanks
+
+
+[01/16/2024 12:35] 0xsaviour_
+am getting panic revert error on `buyCuvesToken()`
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/image-CBED6.png
+
+
+[01/16/2024 12:36] mctoady
+yep
+
+
+[01/16/2024 12:36] 0xsaviour_
+How can I resolve this
+
+
+[01/16/2024 12:36] mctoady
+when supply == 0 amount has to == 1
+
+
+[01/16/2024 12:36] mctoady
+https://tenor.com/view/jos%C3%A9mourinho-big-trouble-if-i-speak-prefer-not-to-speak-interview-gif-16725048
+
+{Embed}
+https://tenor.com/view/jos%C3%A9mourinho-big-trouble-if-i-speak-prefer-not-to-speak-interview-gif-16725048
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/jos%25C3%25A9mourinho-big-trouble-E12AE.png
+
+{Reactions}
+😅 (3) 
+
+[01/16/2024 12:37] 0xsaviour_
+Calling this func with Supply > 1
+
+
+[01/16/2024 12:38] mctoady
+oh, not sure then
+
+
+[01/16/2024 12:41] xors33r
+you are probably not sending the correct amount of ETH
+
+
+[01/16/2024 12:43] 0xsaviour_
+value sent is calculated using `getBuyPriceAfterFee()` (provided in the contract)
+
+
+[01/16/2024 12:48] xors33r
+First token is free, then if i buy 3 more tokens i don't have the same amount as you in my test
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/Screenshot_2024-01-16_at_8.47.45_PM-78AD2.png
+
+
+[01/16/2024 12:49] mctoady
+In the case of this protocol are holder fees earned considered `fees` in the Code4rena judging context because they operate closer to `yield` imo?
+
+
+[01/16/2024 12:52] 0xsaviour_
+maybe cause we set different fee
+
+
+[01/16/2024 12:59] xors33r
+Oh yeah you are right
+
+
+[01/16/2024 13:03] tumelo_crypto
+I think it will be considered as fee since that’s what the sponsors call it
+
+{Reactions}
+🫡 
+
+[01/16/2024 16:06] bjorn_bug
+Hey guys, Ask this question to the team some days ago in private thread, but it seems that they disappear? can some ask this question please if they grasp this part very well.
+I want to ask about fees when someone buys or sells Curve tokens. What kinds of fees does a user have to pay in a buyTrade and sellTrade, and who do they pay these fees to(protocol, subject, referral, etc?
+
+
+[01/16/2024 16:11] tumelo_crypto
+Go to this function you’ll see where all the fees go
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/IMG_1048-C01DC.jpg
+
+{Reactions}
+🥹 
+
+[01/16/2024 16:16] bjorn_bug
+Thanks for the pic! but I'll like to exactly to know when a there is buy a trade _transferFees isBuy = true. what fees user pay? it is only the protocolFees, subjectFee, holder fee or just  "protocolFees, subjectFee"?
+
+
+[01/16/2024 16:18] tumelo_crypto
+Whether u buy or sell u pay all the fees
+
+{Reactions}
+✅ (2) 
+
+[01/16/2024 16:22] 0xstalin
+as more curveTokens are bought, the more appreciates in value existing curveTokens, so, if someone paid fees when he bought tokens, it also makes sense to pay fees when those tokens are sold, you can think about it like: users pay fees to enter the market, they earn fees while they hold the tokens, and at the end, when they want to leave the market they'll need to pay an exit fee
+
+{Reactions}
+🤝 
+
+[01/16/2024 16:23] masol_66728
+are the sponsors going to show up before the audit ends?
+
+
+[01/16/2024 16:25] 0xandy_2014_07_22
+Yes, price get higher when there's more tokens. Check friend.tech math, it's linked in the readme
+
+
+[01/16/2024 16:26] 0xandy_2014_07_22
+Yes sir
+
+
+[01/16/2024 16:26] 0xandy_2014_07_22
+Both
+
+
+[01/16/2024 16:27] 0xandy_2014_07_22
+All fees for any transaction. We are still evaluating if protocol will be only on buy but for now on every transaction
+
+
+[01/16/2024 16:28] 0xandy_2014_07_22
+Yes, I agree and I'm that guy
+
+{Reactions}
+😄 (6) 
+
+[01/16/2024 16:29] canttrustthem
+@0xAndy Check private thread please
+
+
+[01/16/2024 16:41] 0xandy_2014_07_22
+I think all the pm are already answered
+
+
+[01/16/2024 16:41] 0xandy_2014_07_22
+Will check again in two hours
+
+{Reactions}
+thankyou 
+
+[01/16/2024 16:51] thekmj
+Thank you for the contest. Submitted quite a handful of reports for this one 😅
+
+
+[01/16/2024 16:55] ev_om
+I would expect it to be treated as yield tbh. It is yield regardless of what the sponsor calls it
+
+
+[01/16/2024 17:31] tumelo_crypto
+Yeah that’s possible as well🤔
+
+
+[01/16/2024 20:00] mrudenko
+wasted
+
+
+[01/16/2024 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Curves** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+
+[01/16/2024 20:04] 0x11singh99
+Submissions ??
+
+{Reactions}
+😅 
+
+[01/16/2024 20:06] dimulski
+not public yet, I am betting arround 2k
+
+
+[01/16/2024 20:07] 0x11singh99
+noooo😢
+
+
+[01/16/2024 20:07] 0xsl1
+that would be wild nah
+
+
+[01/16/2024 20:07] visualbits
+For 600 sloc?🤔
+
+
+[01/16/2024 20:07] 0xsl1
+1483
+
+
+[01/16/2024 20:08] 0xsl1
+💀
+
+
+[01/16/2024 20:08] dimulski
+I think there are a lot of new auditors that joined this contest, so yeah
+
+{Reactions}
+👍 (3) 
+
+[01/16/2024 20:08] dimulski
+most of them will prob be invalid
+
+{Reactions}
+🙏🏼 
+
+[01/16/2024 20:08] tumelo_crypto
+Yeah most likely
+
+
+[01/16/2024 20:15] mrudenko
+as always
+
+
+[01/16/2024 20:16] thebirdeye.eth
+Gas finding rewards for this contest?
+
+
+[01/16/2024 20:16] mrudenko
+ok guys, see you in 2 months here)
+
+
+[01/16/2024 20:17] ubl4nk
+If alive
+
+
+[01/16/2024 20:20] ubl4nk
+```
+if (block.timestamp >= now + 2 months && alive()) {
+  revisit_curves_channel_for_results();
+}
+else {
+  im_dead();
+}
+```
+
+{Reactions}
+C4Keycap (2) 😂 (3) 
+
+[01/16/2024 20:21] nethoxa
+Just skimmed through a few... chatgpt, the best auditor of 2024
+
+{Reactions}
+👍 
+
+[01/16/2024 20:22] ubl4nk
+Anyone can audit this code for free and find an issue ? 😿
+
+
+[01/16/2024 20:27] tumelo_crypto
+High Severity: 2 months too long😂
+
+{Reactions}
+🤣 
+
+[01/16/2024 20:35] ubl4nk
+😅 😂  That is right
+
+
+[01/16/2024 20:38] mctoady
+how many of them are the High from the botrace? :kek:
+
+
+[01/16/2024 20:38] 0xsl1
+seen a few
+
+
+[01/16/2024 20:56] kosedogus
+Judges' job getting harder every day 🥲
+
+{Reactions}
+😂 (2) 4739_Skeletor (2) 
+
+[01/16/2024 21:19] fktworld
+The team is under a lot of pressure. Please give them some time.
+
+
+[01/16/2024 21:20] faithxia
+I would hope under 20 submissions about that modifier finding from the bot race but maybe I'm too optimistic 😅
+
+
+[01/16/2024 21:27] nethoxa
+Trust me there are more
+
+
+[01/16/2024 21:27] nethoxa
+FAR more
+
+
+[01/16/2024 21:28] faithxia
+:wazow:
+
+
+[01/16/2024 21:29] nethoxa
+Judge rn lmao
+
+
+[01/16/2024 22:38] 0x1118641
+1483 submissions ? I must have missed some findings then 😂
+
+
+[01/16/2024 23:39] 0xfave
+damn
+
+
+[01/17/2024 02:00] tumelo_crypto
+Bruh😂😂it makes you feel like an idiot for not finding all those bugs until you see they’re all invalid🤣🤣🤣
+
+
+[01/17/2024 02:01] prathik358
+Where can I find all the submissions ?
+
+
+[01/17/2024 02:01] tumelo_crypto
+You have to have backstage access to be able to see all the submissions
+
+
+[01/17/2024 02:02] prathik358
+Ok thnx
+
+
+[01/17/2024 05:02] petro_1912
+How can I see the submissions in detail? How did you know 1483 submissions?
+
+
+[01/17/2024 05:06] petro_1912
+How can I request backstage access?
+
+
+[01/17/2024 05:13] catscanaudit
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
++Backstage wardens
+
+{Reactions}
+👍 (3) 
+
+[01/17/2024 08:47] xkeywordx
+Wait, this chat was here all along?
+
+{Reactions}
+😄 
+
+[01/17/2024 08:47] xkeywordx
+I've audited this blindly by my own without getting any feedback, lol. I am such a boomer
+
+
+[01/17/2024 08:48] xkeywordx
+what do you mean? How do u know if someone used ChatGPT or not?
+
+
+[01/17/2024 08:50] nethoxa
+That a lot of issues I did read were trash, and because of that they will be jnvalidated
+
+
+[01/17/2024 08:50] nethoxa
+Like in any contest
+
+
+[01/17/2024 08:50] xkeywordx
+I mean, isn't that the case almost all the time?
+:))
+
+
+[01/17/2024 08:51] nethoxa
+Yeah, but there are like 300 reports covering the same issue
+
+
+[01/17/2024 08:51] nethoxa
+:4739_Skeletor:
+
+
+[01/17/2024 08:51] xkeywordx
+you have new people coming in, especially first time participants, like myself, and I already assumed that all my findings are in fact "not findings" and will be invalidated. I am happy with myself that I took the step and actually took part, and I submitted only the things that I deemed relevant.
+
+
+[01/17/2024 08:53] nethoxa
+Yeah, that's good, we all started like that and is the way to go. But seeing so many is shocking every time and i feel sorry about the judges/lookouts 🤣🤣
+
+{Reactions}
+👍 (2) 
+
+[01/17/2024 09:08] xkeywordx
+:))
+
+
+[01/17/2024 10:09] tumelo_crypto
+Yeah it takes a few contests to improve and get some good findings
+
+
+[01/17/2024 10:50] thebirdeye.eth
+As a newbie,happy to throw myself into the contest.
+
+
+[01/17/2024 10:51] thebirdeye.eth
+Without using AI,got about 8 gas findings but sadly 4 was part of the Bot race contest.
+
+{Reactions}
+👍 
+
+[01/17/2024 11:24] tumelo_crypto
+When I was a newbie I after the first contest I switched to focus almost exclusively on highs and mediums only because of that, plus you improve faster when focusing on learning the big bugs
+
+
+[01/19/2024 08:32] xkeywordx
+guys, one question, will we or do we already have access to the reports of other people? I would like to see what other, more senior auditors found on this protocol and compare my findings to theirs so that I can take notes and become better in the future.
+
+
+[01/19/2024 08:36] xors33r
+Only backstage role can see them
+https://discord.com/channels/810916927919620096/1192127250527686807/1196997748201893929
+
+
+[01/19/2024 09:13] xkeywordx
+not even after the judging period ends? I mean, a final report should be issued at some point towards the protocol, right? Will that not be public after the bugs are fixed ofc?
+
+
+[01/19/2024 09:14] xors33r
+it ll be public after the result
+
+
+[01/19/2024 09:15] xkeywordx
+that's what I meant with my first question. So we will all have access to the public report once everything goes through, even if this happens, let's say 2 months down the line or so.
+
+
+[01/19/2024 11:02] canttrustthem
+Yes, the final report will be public to anyone. But it will probably take some time before it gets published.
+
+
+[01/19/2024 15:18] thebrittfactor
+Keep an eye out for our public reports [here](https://code4rena.com/reports).
+
+
+[01/19/2024 15:18] xkeywordx
+Ty
+
+
+[01/20/2024 14:39] luke_john
+hi, I have submissions, but I cannot find them in the list QA repository.
+
+
+[01/20/2024 14:39] luke_john
+Can you take a look?
+
+
+[01/20/2024 16:37] visualbits
+You must have backstage role, contact staff
+
+
+[01/22/2024 11:54] peritoflores
+Hi, when PJQA will be for this contest?
+
+
+[01/22/2024 15:12] kaveyjoe
+After judging Finished😁😂
+
+
+[01/22/2024 15:51] peritoflores
+who is the judge for this contest?
+
+
+[01/24/2024 16:38] almurhasan
+Hi
+
+
+[01/26/2024 06:58] mylifechangefast.eth_70767
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+
+{Embed}
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/waiting-waiting-patiently-C8F8A.png
+
+{Reactions}
+😂 (4) 
+
+[01/26/2024 07:08] visualbits
+At least 2 more weeks to announce the results, still in the sponsor review stage, so don't wait
+
+{Reactions}
+hi5 (10) 
+
+[02/03/2024 19:47] 0x1118641
+if you have backstage role where cqn you see the judged issues ?
+
+
+[02/04/2024 04:37] visualbits
+C4 github
+
+
+[02/04/2024 19:23] .jacopod
+How do you get the backstage role?
+
+
+[02/04/2024 19:52] visualbits
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
++Backstage wardens
+
+{Reactions}
+❤️ 
+
+[02/05/2024 08:19] haxatron1
+Looks like judging for this one has begun  https://twitter.com/alcueca/status/1754415063660671370?t=RVTvnSuztoVTNvDx9H3soQ&s=19
+
+{Embed}
+https://twitter.com/alcueca/status/1754415063660671370?t=RVTvnSuztoVTNvDx9H3soQ&s=19
+alcueca (@alcueca) on X
+Judging the most insane contest at @code4rena ever.
+
+- Small pot ($36k)
+- Small codebase (550 sloc)
+- ~200 competitors
+- ~1500 submissions
+
+I need a hug
+Twitter
+
+{Reactions}
+😅 (9) 👀 (2) 
+
+[02/05/2024 09:22] rouhsamad
+🫂 for judge
+
+{Reactions}
+🫂 (38) 
+
+[02/05/2024 19:55] osmanozdemir1
+What? Is that emoji a hug? 😅
+
+I always thought it is some kind of camera 🎥 😄
+
+{Reactions}
+🫂 (5) 😀 📸 (4) 🫡 
+
+[02/06/2024 12:58] rouhsamad
+will results come out this week?
+
+
+[02/06/2024 13:00] haxatron1
+The guy already said it will take him 4 days and thats if he doesnt get carpal tunnel
+
+{Reactions}
+😂 (3) 
+
+[02/06/2024 13:20] visualbits
+Maybe next week
+
+
+[02/10/2024 10:51] thebirdeye.eth
+Earnestly waiting on result to see how well I did in my first contest.
+
+
+[02/11/2024 11:41] mctoady
+Don't hang around waiting, get your hands dirty with some more contests. The more hours in the saddle the better
+
+{Reactions}
+👌 (11) 👆 (2) 
+
+[02/15/2024 21:14] dimulski
+comon icon is up, when results
+
+{Reactions}
+👀 (7) 10_10 (3) 
+
+[02/16/2024 02:40] haxatron1
+Cant wait to get peanuts for this one 😂
+
+{Reactions}
+😂 (8) 🥜 (4) 
+
+[02/16/2024 08:50] xyzbtchunt
+https://tenor.com/view/sleepy-gif-25544536
+
+{Embed}
+https://tenor.com/view/sleepy-gif-25544536
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/sleepy-63607.png
+
+
+[02/16/2024 09:12] dimulski
+think c4 has to choose another token with at least 18 decimals to pay some of the highs in this contest 😄
+
+{Reactions}
+😂 (5) 
+
+[02/16/2024 09:16] haxatron1
+Ikr
+
+
+[02/16/2024 09:17] haxatron1
+Usdc.e has how many decimals?
+
+
+[02/16/2024 09:17] haxatron1
+6 correct
+
+
+[02/16/2024 09:18] haxatron1
+Imagine getting less than 1/10^6 of 1 usdc in this contest 😂
+
+
+[02/16/2024 09:20] haxatron1
+The gas fees will cost more than sending the prize
+
+
+[02/16/2024 09:31] haxatron1
+This will probably the 1st contest where top rank earns < 500
+
+{Reactions}
+👆 (4) 
+
+[02/16/2024 09:56] dimulski
+I want to see the amount of people that participated, usually it is around 200
+
+
+[02/16/2024 10:17] _m4ttm
+200 apparently, scroll up a bit and look at the tweet
+
+
+[02/16/2024 11:28] _paperparachute
+The prizepool is distributed one way or another, if there are countless dupes and a high severity finding becomes "worthless", then the pool distributes better into H severities that were found by less people.
+
+{Reactions}
+🇼 (12) 🇭 (10) 🇪 (10) 🇳 (10) 🇷 (5) 
+
+[02/16/2024 16:03] _paperparachute
+https://tenor.com/view/fine-then-gif-24552688
+
+{Embed}
+https://tenor.com/view/fine-then-gif-24552688
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/fine-then-1005C.png
+
+{Reactions}
+🚀 
+
+[02/16/2024 16:07] visualbits
+@PaperParachute | C4 You are so fast this contest 😄:chefskiss:
+
+
+[02/16/2024 16:08] _paperparachute
+Yeah, now I have to go back and tidy it all up. haha. I will be going through and tagging individuals in teams!
+
+{Reactions}
+hi5 (8) 
+
+[02/16/2024 16:09] sp1cymeatball
+I thought it would be worse, congrats everyone!
+
+
+[02/16/2024 16:11] visualbits
+Me too, I had predicted a maximum of 500 buckets in the most optimistic state, I did not expect it😄
+
+
+[02/16/2024 16:12] jvorex
+Oh my god! First win in the arena! Team work makes the dream work. Ty c4 and Ty to my teammates @Kenzo @Maroutis @Gelato_ST
+
+{Reactions}
+🎉 (8) hi5 (5) cyberheart (3) friends (2) 
+
+[02/16/2024 16:17] 0x1118641
+14$ 😐
+
+
+[02/16/2024 16:18] sovaslava9
+So many duplicates in this contest..
+
+
+[02/16/2024 17:26] mike_bello90
+@PaperParachute | C4  how is posible that i didn't win anything if I have 3 validad issues?
+
+
+[02/16/2024 17:30] thekmj
+👀 certainly a good lesson on how to pick your contests
+
+{Reactions}
+🔥 (3) 
+
+[02/16/2024 17:31] _paperparachute
+Several findings, because of the amount of dupes, became worth less than $0.01.
+
+{Reactions}
+😕 
+
+[02/16/2024 17:31] _paperparachute
+If 200 people can find a bug, the bug itself becomes less valuable.
+
+
+[02/16/2024 17:32] hgq2wnl
+do the findings still count for leaderboard stats?
+
+
+[02/16/2024 17:32] _paperparachute
+Yes, and are valid progression in gaining access to Backstage.
+
+{Reactions}
+👍 
+
+[02/16/2024 17:53] rouhsamad
+I dont see the findings in my profile now, does it mean i have not find any H/M or i should wait?
+
+
+[02/16/2024 17:56] 0x1118641
+I think they are just not visible yet
+
+
+[02/16/2024 18:11] 0xtendency
+Great job @Soul22 👏
+
+
+[02/16/2024 18:17] ubl4nk
+For me, there mentioned 4 confirmed findings, but 2 med and 1 high
+@PaperParachute | C4 
+I think you have missed to calculate another Med
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/Capture-AED6D.PNG
+
+
+[02/16/2024 18:18] haxatron1
+Downgraded to QA
+
+
+[02/16/2024 18:19] ubl4nk
+you see QA is none
+
+
+[02/16/2024 18:19] haxatron1
+Hmm
+
+
+[02/16/2024 18:19] haxatron1
+Idk then
+
+
+[02/16/2024 18:19] haxatron1
+It is possible 2 of your reports had similar root cause and was merged into one
+
+
+[02/16/2024 18:19] haxatron1
+Thats the only other explanation i could think of
+
+
+[02/16/2024 18:20] ubl4nk
+Maybe but lets wait for the @PaperParachute | C4 's answer
+
+
+[02/16/2024 18:25] 0x1118641
+you already see the contest on your c4 profile ? i've got 2 findings but i don't see it
+
+
+[02/16/2024 18:26] ubl4nk
+Probably your 2 findings were invalid and rejected
+
+
+[02/16/2024 18:27] 0x1118641
+it's ok I see it now it says 'Identified 2 confirmed findings' like on yours
+
+{Reactions}
+👍 
+
+[02/16/2024 18:31] haxatron1
+284 contestants identified at least 1 HM 😬
+
+
+[02/16/2024 18:31] haxatron1
+That means participation is likely higher
+
+
+[02/16/2024 18:45] itsmetechjay
+While you have 4 confirmed findings, 2 are grouped under the same Medium finding dupe-set. So they count as one finding for purposes of awarding.  We do understand how that can be confusing and will share that feedback with our product team.
+
+{Reactions}
+👍 
+
+[02/16/2024 19:17] stormreckson
+0.74 2high 1med 🥲
+
+
+[02/16/2024 19:31] forkforkdog
+How many total findings did you guys sent?
+
+
+[02/16/2024 19:45] _polex
+Hey @Jay | C4 can you share me link to apply for backstage please👏
+
+
+[02/16/2024 19:51] itsmetechjay
+If you have met the criteria for backstage, you can open a [help desk request](https://code4rena.com/help) and someone from the team can assist you next week.
+
+{Embed}
+https://code4rena.com/help
+Help | Code4rena
+Need help as a developer looking to secure your project or as a Warden finding vulnerabilities? Contact us via our Help page today.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/c4-og-banner-322F7.png
+
+
+[02/16/2024 19:51] _polex
+Ty very much
+
+{Reactions}
+hi5 
+
+[02/16/2024 19:56] tigerfrake
+what? 🤔
+
+
+[02/16/2024 20:01] tychaios.
+I got confirmed 2 Highs and 3 meds with a payout of $1.46 💀
+
+
+[02/16/2024 20:28] haxatron1
+Same xD submitted 6 hm but got 1.40
+
+
+[02/16/2024 20:28] haxatron1
+Its rough out here
+
+
+[02/16/2024 20:42] kuprumion
+$0.12 2high 1med 🥲
+
+
+[02/16/2024 20:43] 7a4raf
+Congrats everyone 🔥🔥
+Didn't receive a notif on this one thought I was doomed 😂
+
+
+[02/16/2024 20:46] 7a4raf
+Nearly 800 dups of hm💀
+People are getting really good at security lol
+
+
+[02/16/2024 20:53] sh0lt0
+Hey, can someone please help telling where does invalidated finding goes? And is there a way if I can see them?
+
+
+[02/16/2024 21:05] 7a4raf
+You can check them after the repo is made public
+Which is after the report is published 
+Which takes some time idk how much exactly.
+Another way is getting backstage role, check for more details on the c4 website.
+
+
+[02/16/2024 21:20] popelev.fedor
+Hello. I see 1 confirmed high on my portfolio, but don see my 0 USDC in this list) My profile on C4 site: @popelev
+
+
+[02/16/2024 21:21] _paperparachute
+We only list payments above $0.01
+
+{Reactions}
+✅ (5) 
+
+[02/16/2024 21:54] mctoady
+First 3 figure result lets goo :pepe_disco: 
+
+Know this was a first contest for a lot of newbies, and you might be frustrated by the results, trust me I've been there. 
+But keep working, results will come if you put the hours in :salute:
+
+{Reactions}
+🎉 (5) 
+
+[02/16/2024 22:13] hgq2wnl
+i mean I think the fact that we aren't immediately told to GTFO after finding a dupe is pretty cool imo (web2 bug bounty)
+
+{Reactions}
+kek 
+
+[02/17/2024 04:32] xors33r
+Such a big gap between finding 🤯
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/Screenshot_2024-02-17_at_12.31.53_PM-AEA12.png
+
+
+[02/17/2024 04:33] xors33r
+i guess it was a unique finding
+
+
+[02/17/2024 04:33] burhan_khaja
+Can someone explain why these rewards dont show up on etherscan... Im new C4 i got paid some bounty in this contest but i dont see any money in my wallet
+
+
+[02/17/2024 04:36] xors33r
+Best reward in this contest is backstage access 🤣
+
+
+[02/17/2024 04:40] daniel526
+I guess the rewards haven't been distributed yet, but already announced!
+
+{Reactions}
+👍 
+
+[02/17/2024 04:44] daniel526
+I think, for example finding a medium/ a high with a few duplicates earns you more in rewards than finding several mediums/ highs with bunch of duplicates makes the findings become worthless hence earning less in rewards
+
+
+[02/17/2024 06:23] prathik358
+I don't have the backstage role , where can I find what other people have submitted?
+
+
+[02/17/2024 06:34] pkqs90
+1H+2M=5$ .. well at least I can apply for backstage now
+
+{Reactions}
+❤️ (2) 
+
+[02/17/2024 07:45] rouhsamad
+Yea for example i found 2 H 3 M and got 30 cents but this is normal because my issues were kind of first sight catch and hence had many dups
+The target is to find those deeper ones which require more knowledge/tools/experience/patience/etc
+
+
+[02/17/2024 13:29] sh0lt0
+Thanks
+
+
+[02/17/2024 13:45] jes16jupyter
+So, if i got 3 findings, i can apply the backstage right now, or i have to participate at least 3 contests?
+
+
+[02/17/2024 13:50] visualbits
+3 contests
+
+
+[02/17/2024 13:51] jes16jupyter
+Thanks mate. So i have to participate in 3 contests and all get valid findings, right?
+
+
+[02/17/2024 13:52] jes16jupyter
+Another thing to ask, why i can't see `help secure CURVES` logo on my profile, with only number of findings
+
+
+[02/17/2024 13:53] visualbits
+Yeah, you should first apply for KYC (certified role) then apply for backstage.
+
+{Reactions}
+thankyou 
+
+[02/17/2024 13:54] visualbits
+This feature is for certified wardens
+
+{Reactions}
+thankyou 
+
+[02/17/2024 13:54] jes16jupyter
+Thanks mate!
+
+
+[02/17/2024 16:20] tumelo_crypto
+When the report is released, which should be a anywhere from now to a few weeks
+
+
+[02/17/2024 16:22] prathik358
+thnx 👍
+
+
+[02/18/2024 14:30] burhan_khaja
+How many days after announcing rewards they are actually transferred to wallet
+
+
+[02/18/2024 14:31] burhan_khaja
+Have anyone received curves reward in your wallet?
+
+
+[02/18/2024 14:34] burhan_khaja
+Seems like a scam
+
+
+[02/18/2024 14:35] burhan_khaja
+But dont u know code arena has support section on their website
+
+
+[02/18/2024 14:35] thesavageteddy
+probably scam bot, report in #spam-report
+
+{Reactions}
+👍 
+
+[02/18/2024 14:36] burhan_khaja
+?
+
+
+[02/18/2024 15:10] osmanozdemir1
+No. Follow the announcement channel.
+
+You’ll see something like this: https://discord.com/channels/810916927919620096/810929015509483554/1207079579722842142
+
+{Reactions}
+👍 
+
+[02/19/2024 19:21] xkeywordx
+Guys, where are the results? I didn't get any mention that it was published
+
+
+[02/19/2024 19:21] .justuzair
+https://discord.com/channels/810916927919620096/1192127250527686807/1208081589020532736
+
+
+[02/19/2024 19:26] xkeywordx
+missed that, thx. Is the report published? My name is not on the list.
+If I am not there what can I see on my profile once the official report is out? I will get some sort of "personalized" feedback/response to what I submitted?
+
+
+[02/19/2024 19:26] .justuzair
+they said the rewards under certain amounts are not listed
+
+here is the message
+https://discord.com/channels/810916927919620096/1192127250527686807/1208161169391493160
+
+
+[02/19/2024 19:28] xkeywordx
+lol, can someone get paid less than 0.01 :))
+
+
+[02/19/2024 19:28] .justuzair
+yup
+
+
+[02/19/2024 19:28] xkeywordx
+it was my first contest so I am not interested if I win 10$ or 100$, I am more interested to understand why my submission was not valid and what did I miss, in the sense of what others found that I did not
+
+
+[02/19/2024 19:28] .justuzair
+apparently people will get the amounts LOL
+
+
+[02/19/2024 19:30] .justuzair
+for that ser you'll need to view report
+
+
+[02/19/2024 19:31] _paperparachute
+Technically speaking yes they can, but a line has to be drawn somewhere!
+
+
+[02/19/2024 19:32] _paperparachute
+I think it's _possible_ to receive usdc up to like.. 6 decimal points? I'm not sure off the top of my head, but we aren't going to do that!
+
+
+[02/19/2024 19:33] xkeywordx
+since it was my first competition I would like to understand why my submissions were wrong. When a judge decided to not credit a finding, do they also explain why, or you simply just don't get paid, and you have to read the final report to understand what you missed?
+
+
+[02/19/2024 19:33] .justuzair
+I'm interested in reading the report when will that be published, although I didnt participate in this one
+
+
+[02/19/2024 19:34] xkeywordx
+yeah, 6 decimals. Sounds good, but still, below a certain amount is kinda pointless anyway :))
+
+
+[02/19/2024 19:34] _paperparachute
+We will start working on it shortly 🙂
+
+
+[02/19/2024 19:35] .justuzair
+oh okay thanks for letting us know
+
+
+[02/19/2024 19:35] _paperparachute
+When we release reports we also make the repo public and you can see what happened with your findings
+
+{Reactions}
+👍 
+
+[02/19/2024 19:36] .justuzair
+also how is the judging time decided, I mean some take a month, some less, what factors does it depend on??
+
+
+[02/19/2024 22:10] itsmetechjay (pinned)
+ℹ️ Wardens - Please note that a labeling discrepancy has been brought to our attention in relation to awarding for the Curves audit. The judge has provided clarification on their original intent and the label has been rectified accordingly. Since awards have not yet been sent and this wasn't a judging re-assessment, but rather a tooling error, we'll be recalculating awards for correctness. We hope to have a new/updated award announcement for you tomorrow. Thanks for your patience and understanding!
+
+{Reactions}
+😱 (5) thisisfine (4) 👍 (2) 
+
+[02/19/2024 22:10] itsmetechjay
+Pinned a message.
+
+
+[02/20/2024 02:15] mctoady
+Typically:
+Number of submissions to go through
+Number of issues to confirm
+Discussing issues with the sponsors so they're aware of issues & accept the findings
+
+
+[02/20/2024 02:18] .justuzair
+I see thanks
+
+
+[02/20/2024 11:42] ubl4nk
+is there any hope for new update today ?
+
+
+[02/20/2024 12:34] catscanaudit
+damn its just 1 day dawg
+
+
+[02/20/2024 12:36] ubl4nk
+She mentioned "tomorrow"
+
+
+[02/20/2024 12:39] osmanozdemir1
+Yes but it’s not officially tomorrow in terms of working hours if they are in the USA 😄
+
+{Reactions}
+😅 
+
+[02/20/2024 12:39] mctoady
+We need our extra 12 cents :pepenotes:
+
+{Reactions}
+😆 (2) chefskiss 
+
+[02/20/2024 14:56] xyzbtchunt
+:chefskiss:
+
+
+[02/20/2024 19:29] itsmetechjay
+ℹ️ Wardens - we had an additional labeling discrepancy pointed out as part of this process, which the judge has clarified as well.  The new/updated award announcement will also take this into account.  Thanks again for your patience.
+
+{Reactions}
+👍 (2) 
+
+[02/20/2024 19:56] rouhsamad
+What does this mean?
+
+
+[02/20/2024 20:00] 0xsorrynotsorry
+https://discord.com/channels/810916927919620096/1192127250527686807/1209260676527161354
+
+{Reactions}
+thankyou (2) 
+
+[02/20/2024 20:05] _paperparachute
+🤑 🎉  Updated Awards for **Curves**:
+
+$2,455.15 USDC » @hals 
+$1,823.29 USDC » @ether_sky 
+$1,647.75 USDC » @btk 
+$1,637.14 USDC » @m4ttm 
+$1,636.89 USDC » @santipu_ 
+$1,632.39 USDC » @visualbits 
+$1,594.55 USDC » @BowTiedOriole 
+$1,418.95 USDC » @zhaojie 
+$1,241.31 USDC » @_eperezok 
+$1,230.77 USDC » @SpicyMeatball 
+$1,225.72 USDC » @rvierdiiev 
+$426.31 USDC » @nuthan2x 
+$325.89 USDC » @0xPhantom 
+$321.53 USDC » DarkTower 
+$290.76 USDC » @aslanbek 
+$267.14 USDC » @EV_om 
+$257.43 USDC » @MrPotatoMagic 
+$248.13 USDC » @McToady 
+$234.03 USDC » @wangxx2026 
+$233.57 USDC » @nonseodion 
+$205.66 USDC » @alexfilippov314 
+$193.53 USDC » spaghetticode_sentinel 
+$192.08 USDC » @nmirchev8 
+$190.97 USDC » @Kow 
+$189.89 USDC » @kutu 
+$189.88 USDC » @0xNaN 
+$189.71 USDC » @xiao 
+$179.28 USDC » Bobface 
+$167.08 USDC » @hunter_w3b 
+$155.42 USDC » 0xmystery 
+$143.39 USDC » @cats 
+$140.97 USDC » @d3e4 
+$140.79 USDC » @slylandro_star 
+$140.42 USDC » matejdb 
+$139.41 USDC » @amaechi eth 
+$137.95 USDC » @burhan_khaja 
+$136.88 USDC » @AlexCzm 
+$136.88 USDC » @Krace 
+$136.00 USDC » @zxriptor 
+$123.70 USDC » @Sathish9098 
+$122.89 USDC » @dimulski 
+$120.10 USDC » @0xepley 
+$120.10 USDC » @Fouzantanveer 
+$117.40 USDC » @ZanyBonzy 
+$116.28 USDC » @0xAadi 
+$116.28 USDC » @0xSmartContract 
+$116.28 USDC » @Arion 
+$116.28 USDC » @yongskiws 
+$115.71 USDC » @bengyles 
+$115.60 USDC » lukejohn 
+$114.04 USDC » @mrudenko 
+$103.20 USDC » @jesjupyter 
+$102.16 USDC » @KingNFT 
+$102.10 USDC » @twcctop
+
+
+[02/20/2024 20:05] _paperparachute
+$99.35 USDC » @eeshenggoh 
+$99.34 USDC » @adamn000 
+$98.27 USDC » @erosjohn 
+$98.27 USDC » @13u9 
+$98.27 USDC » @pipidu83 
+$98.27 USDC » @M3azad 
+$98.26 USDC » Daniel526 
+$67.43 USDC » @c3phas 
+$65.09 USDC » @slvDev 
+$59.41 USDC » @comradeKtg 
+$56.64 USDC » @jasonxiale 
+$56.43 USDC » @ahmedaghadi 
+$55.94 USDC » @grearlake 
+$53.97 USDC » @merlinboii 
+$51.22 USDC » @0x11singh99 
+$50.81 USDC » @0xAnah 
+$50.81 USDC » @JCK 
+$50.81 USDC » @Raihan 
+$50.81 USDC » @SAQ 
+$50.81 USDC » @SY_S 
+$50.81 USDC » @dharma09 
+$50.81 USDC » shamsulhaq123 
+$46.31 USDC » @SovaSlava 
+$44.62 USDC » @imare 
+$43.93 USDC » @para8956 
+$43.51 USDC » Nikki 
+$42.36 USDC » @jangle 
+$41.80 USDC » @anshujalan 
+$41.07 USDC » @y4y 
+$41.07 USDC » @0xPluto 
+$41.07 USDC » @gesha17 
+$39.70 USDC » @HChang26 
+$39.69 USDC » @th13vn 
+$39.69 USDC » @gkrastenov 
+$32.99 USDC » @peanuts 
+$31.48 USDC » @0x0bserver 
+$25.88 USDC » UbiquitousComputing 
+$24.80 USDC » @Cosine 
+$23.08 USDC » @lsaudit 
+$17.45 USDC » @catellatech 
+$17.45 USDC » @john80 
+$17.33 USDC » @0xStalin 
+$16.93 USDC » @osmanozdemir1 
+$16.26 USDC » @klau5 
+$15.39 USDC » @erebus 
+$15.39 USDC » @cheatc0d3 
+$14.70 USDC » @edger 
+$14.70 USDC » @XORs33r 
+$14.29 USDC » @0x111 
+$14.28 USDC » @Prathik3 
+$14.28 USDC » 0xStriker 
+$14.28 USDC » @0xGreyWolf 
+$14.28 USDC » @7ashraf
+
+
+[02/20/2024 20:05] _paperparachute
+$7.43 USDC » 0xhex 
+$7.43 USDC » 0xta 
+$7.43 USDC » @K42 Ψ 
+$7.43 USDC » @mgf15 
+$7.43 USDC » @naman1778 
+$7.43 USDC » @sivanesh_808 
+$6.89 USDC » Soliditors 
+$6.74 USDC » @KupiaSec 
+$6.74 USDC » @deepplus 
+$6.73 USDC » whoismatthewmc1 
+$6.71 USDC » @sl1 
+$6.50 USDC » @0xprinc 
+$6.46 USDC » @trtrth 
+$6.19 USDC » @israeladelaja 
+$6.02 USDC » @spacelord47 
+$5.80 USDC » @code-cipher 
+$5.80 USDC » @Ryonen 
+$5.51 USDC » @mahdiRostami 
+$5.38 USDC » Josephdara_0xTiwa 
+$5.38 USDC » @0xE1 
+$5.36 USDC » @FastChecker 
+$5.35 USDC » @DanielArmstrong 
+$5.33 USDC » @zhaojohnson 
+$5.21 USDC » @lil_eth 
+$5.21 USDC » @hihen 
+$5.20 USDC » @danb 
+$5.20 USDC » n1punp 
+$5.12 USDC » @pkqs90 
+$5.11 USDC » @Draiakoo 
+$5.10 USDC » @Kose 
+$5.09 USDC » 0xMAKEOUTHILL 
+$5.09 USDC » @Jacopod 
+$4.94 USDC » @zaevlad 
+$4.91 USDC » @OpposingMonkey 
+$4.42 USDC » @khramov 
+$4.25 USDC » Inference 
+$4.25 USDC » @sha256(Saediek) 
+$4.25 USDC » @codegpt 
+$4.25 USDC » @Topmark 
+$4.24 USDC » @0xBitcoin 
+$4.24 USDC » @adeolu 
+$4.17 USDC » @cccz 
+$4.01 USDC » @pep7siup 
+$4.01 USDC » @Lalanda 
+$4.01 USDC » almurhasan 
+$4.00 USDC » @ptsanev 
+$3.83 USDC » LeoGold 
+$3.83 USDC » @cartlex_ 
+$3.83 USDC » @0xSwahili 
+$3.83 USDC » @KmanOfficial 
+$3.82 USDC » @0xhashiman 
+$3.82 USDC » @Faith 
+$3.82 USDC » @Nachoxt17🗽💶💷💴 
+$3.82 USDC » @karanctf 
+$3.82 USDC » @mitev 
+$3.82 USDC » @polarzero 
+$3.82 USDC » @0xfave ⨀ 
+$3.82 USDC » 0xmuxyz 
+$3.82 USDC » @JayshreeRAM 
+$3.82 USDC » John_Femi 
+$3.82 USDC » @Shubham 
+$3.82 USDC » @Tigerfrake 
+$3.82 USDC » @jatin_19 
+$3.82 USDC » @Taneristique 
+$3.82 USDC » kiki 
+$3.82 USDC » @ziyou- 
+$3.76 USDC » @ke1caM 
+$2.68 USDC » Tychai0s 
+$2.62 USDC » @haxatron 
+$2.47 USDC » bronze_pickaxe 
+$2.46 USDC » yixxas 
+$2.20 USDC » @PENGUN 
+$2.20 USDC » @BugzyVonBuggernaut 
+$2.19 USDC » @Matue 
+$1.79 USDC » CDSecurity
+
+
+[02/20/2024 20:05] _paperparachute
+$1.62 USDC » @iamandreiski 
+$1.57 USDC » @0xLogos 
+$1.56 USDC » @Kong 
+$1.39 USDC » @Stormreckson⛈ 
+$1.39 USDC » @TermoHash 
+$1.39 USDC » @AS 
+$1.38 USDC » @emrekocak 
+$1.38 USDC » @DMoore 
+$1.38 USDC » @0xJaeger 
+$1.38 USDC » @batsanov 
+$1.38 USDC » @igbinosuneric 
+$1.38 USDC » @jesusrod15 
+$1.30 USDC » @peritoflores 
+$1.30 USDC » @Soul22 
+$1.27 USDC » @ubermensch 
+$1.26 USDC » @oreztker 
+$1.26 USDC » novodelta 
+$1.26 USDC » @salutemada 
+$1.11 USDC » @unknown-BL4NK 
+$1.11 USDC » @kodyvim 
+$1.11 USDC » @Mylifechangefast_eth🕵 
+$1.11 USDC » @蔡佳誠 
+$1.11 USDC » @dutra 
+$1.11 USDC » @51l3nt 
+$1.08 USDC » @DimaKush 
+$1.08 USDC » @Timenov 
+$1.08 USDC » @darksnow 
+$1.08 USDC » @vnavascues 
+$1.08 USDC » @0xDemon 
+$1.08 USDC » @42TechLabs 
+$1.08 USDC » @InAllHonesty 
+$1.08 USDC » @OMEN 
+$1.08 USDC » nnez 
+$1.08 USDC » @oxTory 
+$1.08 USDC » @thank_you 
+$0.60 USDC » rouhsamad 
+$0.59 USDC » @petro_1912 
+$0.42 USDC » @fishgang 
+$0.42 USDC » @cu5t0mpeo 
+$0.42 USDC » @totovoto 
+$0.42 USDC » @Silvermist 
+$0.42 USDC » @ro1sharkm 
+$0.41 USDC » @c0pp3rscr3w3r 
+$0.41 USDC » @todorc 
+$0.19 USDC » @Varun_05 
+$0.19 USDC » dopeflamingo 
+$0.19 USDC » @kuprum 
+$0.18 USDC » @Tumelo_Crypto 
+$0.18 USDC » al88nsk 
+$0.01 USDC » @alexbabits 
+$0.01 USDC » @Zach_166 
+$0.01 USDC » L0s1 
+$0.01 USDC » @Mike_Bello 
+$0.01 USDC » @nitronite 
+$0.01 USDC » @AgileJune 
+
+🏁 Findings summary
+--------------------------------------—
+High risk findings: 4 unique (376 total)
+Med risk findings: 10 unique (395 total)
+Gas reports: 23 (Best: c3phas)
+QA reports: 113 (Best: 0xmystery)
+Advanced analysis reports: 16 (Best: MrPotatoMagic)
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🚀 
+
+[02/20/2024 20:54] ivand5690
+From 1300 to 5, it should have been a very huge recalculation
+
+{Reactions}
+🤯 (5) 
+
+[02/20/2024 21:08] 0xbtk
+two highs were merged into one
+
+{Reactions}
+🥲 
+
+[02/21/2024 10:49] daniel526
+sent?
+
+
+[02/21/2024 11:43] _paperparachute
+Awards are always announced when sent in #📢announcements
+
+{Reactions}
+👍🏻 (3) 
+
+[02/21/2024 12:01] ubl4nk
+may i DM you ? i have a small and private question about certification process if you have any knowledge
+
+
+[02/21/2024 12:03] _paperparachute
+Thread created. Should see it below this channel 🙂
+
+{Reactions}
+👍 
+
+[02/21/2024 19:11] azadxx
+How much time does they usually take to send winning amount after result?
+
+
+[02/21/2024 20:23] 0xsorrynotsorry
+https://discord.com/channels/810916927919620096/810931711609143326/1209943290640601248
+
+
+[02/22/2024 10:57] 0xblackskull
+@PaperParachute | C4 hey, in my profile i can see i caught 1H and 1M but here i can not see my name
+
+
+[02/22/2024 11:02] 0xblackskull
+@PaperParachute | C4 ??
+
+
+[02/22/2024 11:13] _paperparachute
+Please see [here](https://discord.com/channels/810916927919620096/1192127250527686807/1208161169391493160) and the conversations above. In summary, the amount of dupes for many peoples findings reduced their value to below $0.01.
+
+{Reactions}
+✅ (2) 
+
+[02/22/2024 11:13] _paperparachute
+Also please don't double ping people if they don't get back to you within 5 minutes of asking a question.
+
+{Reactions}
+🆗 (4) this (6) 
+
+[02/24/2024 01:51] j5066
+Awards has been distributed or not?
+
+
+[02/24/2024 03:20] xyzbtchunt
+See #📢announcements
+
+
+[02/24/2024 06:20] daniel526
+I received awards not from the updated  Awards for Curves but from the initial one
+
+{Reactions}
+same (14) 4739_Skeletor (2) 
+
+[02/24/2024 06:32] jes16jupyter
+Yes, it seems there's some error when rewards are been sent.
+
+
+[02/24/2024 06:36] jes16jupyter
+@PaperParachute | C4  Hi, maybe we need a recheck.
+
+
+[02/24/2024 06:50] visualbits
+@PaperParachute | C4 @🦖 eric (ninek) | C4 Awards sent incorrectly 😬
+
+
+[02/24/2024 06:51] visualbits
+First announcement results was sent
+
+
+[02/24/2024 06:55] visualbits
+This cursed contest is intended never to end 😂
+
+{Reactions}
+🤣 (14) 
+
+[02/24/2024 08:01] haxatron1
+Haha rip
+
+
+[02/24/2024 09:15] hisoul22
+How to return it? @PaperParachute | C4
+
+
+[02/24/2024 10:19] 0xhelium
+Do you think this guy will return 1k+ to get 5 back ? Haha
+
+
+[02/24/2024 10:20] 0xhelium
+Do you think all wardens will return it ?
+
+
+[02/24/2024 10:22] hisoul22
+I don't know about others, but I will.
+
+{Reactions}
+❤️ (9) 🚀 (2) 
+
+[02/24/2024 10:22] 0xhelium
+Did your rewarda increase or decrease after re-calculation ?
+
+
+[02/24/2024 10:23] hisoul22
+decrease from 1.3K to 1.3
+
+
+[02/24/2024 10:24] osmanozdemir1
+They might save it as outstanding debt and deduct from future rewards but of course there is no guarantee that there will be future rewards 😅
+
+
+[02/24/2024 11:08] ivand5690
+Well, I don’t mind returning the money as well. But I would appreciate a bit better communication from C4 as well.
+Let me tell you that before this contest I was about to quit C4 contests. I was just spending too much time however results were discouraging, so this prize was a personal boost for me. I saw a light in the tunnel until some days later when they announced the miscalculation.
+So I lost hope again, now seeing the payout today hyped me again, but after reading the comments here, it looks like that this is another mistake by C4.
+So regarding the C4 communication, I meant that I asked few days ago @PaperParachute | C4  about clarification for the initial results. He confirmed that 2 vulnerabilities were combined into one, but when I asked for which two in order to compare them with my findings, I didn’t get any reply afterwards. I understand that this info is released when the final report is posted but there should be some exceptions like this contest and clear information is revealed to all auditors. You can see that many people got confused from all the C4 statements posted here. 
+And again about the money I don’t mind returning it too, my life is not going to change with or without the 1.3K and at the end there are people who deserved it more than me, right? I got more frustrated from the overall communication and all changing posts, which emotionally drained me.
+
+{Reactions}
+❤️ (14) 👎 
+
+[02/24/2024 11:29] azadxx
+@PaperParachute | C4 didn't recieved any award
+
+
+[02/24/2024 12:04] bytes032
+I’d refrain from using this type of language in a customer facing channel.
+
+{Reactions}
+hi5 (3) 👆 
+
+[02/24/2024 12:10] bytes032
+Perhaps a refresher on the code of professional conduct you agreed with when applying for a certified warden would be helpful
+
+https://code4rena.notion.site/Code-of-Professional-Conduct-657c7d80d34045f19eee510ae06fef55
+
+{Embed}
+https://code4rena.notion.site/Code-of-Professional-Conduct-657c7d80d34045f19eee510ae06fef55
+Code of Professional Conduct | Notion
+In addition to the Community Code of Conduct, Certified Contributors are bound by the following Professional Code of Conduct.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/notion-wordmark-AB87F.png
+
+{Reactions}
+hi5 
+
+[02/24/2024 12:17] aslanbekaibimov
+your honor, my client typed "this curves contest", but it got autocorrected
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/better-call-saul-episode-101-amen-saul-ode-A96EB.jpg
+
+{Reactions}
+kek (23) 
+
+[02/24/2024 12:33] 0xbtk
+same here
+
+
+[02/24/2024 12:33] criptoada
+hey - C4 head of growth here - so sorry about all the confusion with Curves payouts. Just a quick post to let you know I've dm'd @🦖 eric (ninek) | C4 to take a look when he starts the day - it's 4:30am there right now. Thanks all very much for staying in communication and all your patience on this!
+
+{Reactions}
+code4rena (2) 
+
+[02/24/2024 13:19] visualbits
+I didn't say anything bad, and I don't have anything to do with customers. The subject of my joke was C4.
+
+
+[02/24/2024 13:24] bytes032
+This is a channel that is read by sponsors, so anything you say has to do with customers.
+
+Imagine you are the sponsor that pays for a “cursed” contest. How would that make you feel?
+
+
+[02/24/2024 13:29] bytes032
+Would you come back as a customer for a cursed contest?
+
+
+[02/24/2024 13:30] bytes032
+Is this how you want to represent the C4 community?
+
+
+[02/24/2024 13:54] mylifechangefast.eth_70767
+Did I just see my name
+
+
+[02/24/2024 16:58] nine_k
+ℹ️ 💰 hey all, very sorry for the mistake here, just getting online here, appreciate your patience 🙏🏼
+
+{Reactions}
+empathy (13) 
+
+[02/24/2024 18:16] nine_k (pinned)
+ℹ️ update! we're gonna get you all who were not sent enough taken care of shortly. 💸 
+
+if you received too much, we'd be grateful if you returned 90% of the excess to `0xd9d37F4CB8F068afb8FB9aaab19D1c4e12495B89` - keep the 10% for the trouble and a token of our appreciation for the return. 💜 :code4rena:
+
+{Reactions}
+💜 (22) code4rena (16) 
+
+[02/24/2024 18:17] itsmetechjay
+Pinned a message.
+
+
+[02/24/2024 18:47] jvorex
+done eric! :code4rena: https://polygonscan.com/tx/0x1630e1bc0f6b25b3f467a3049fa9df4af38b924b3cd9733c98b3baf6f3094067
+
+{Embed}
+https://polygonscan.com/tx/0x1630e1bc0f6b25b3f467a3049fa9df4af38b924b3cd9733c98b3baf6f3094067
+Polygon PoS Chain Transaction Hash (Txhash) Details | PolygonScan
+Polygon (MATIC) detailed transaction info for txhash 0x1630e1bc0f6b25b3f467a3049fa9df4af38b924b3cd9733c98b3baf6f3094067. The transaction status, block confirmation, gas fee, Polygon, and token transfer are shown.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/og-A2EEA.jpg
+
+{Reactions}
+🚀 (18) thankyou (9) 🙏🏼 (7) 🫡 (8) 👍 
+
+[02/24/2024 19:37] hisoul22
+Done. https://polygonscan.com/tx/0x8cdf405cec6a85c38cdc9678b8a16605f90f3668878b85937e2b908b9cefd934
+
+{Embed}
+https://polygonscan.com/tx/0x8cdf405cec6a85c38cdc9678b8a16605f90f3668878b85937e2b908b9cefd934
+Polygon PoS Chain Transaction Hash (Txhash) Details | PolygonScan
+Polygon (MATIC) detailed transaction info for txhash 0x8cdf405cec6a85c38cdc9678b8a16605f90f3668878b85937e2b908b9cefd934. The transaction status, block confirmation, gas fee, Polygon, and token transfer are shown.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/og-A2EEA.jpg
+
+{Reactions}
+🚀 (18) thankyou (10) hi5 (10) 
+
+[02/24/2024 19:57] ivand5690
+from me, as well
+https://polygonscan.com/tx/0x77280d448e8902c8bf52f2dcff1ca434a55faa7cdce59d3162452eebb30b0c9a
+
+{Embed}
+https://polygonscan.com/tx/0x77280d448e8902c8bf52f2dcff1ca434a55faa7cdce59d3162452eebb30b0c9a
+Polygon PoS Chain Transaction Hash (Txhash) Details | PolygonScan
+Polygon (MATIC) detailed transaction info for txhash 0x77280d448e8902c8bf52f2dcff1ca434a55faa7cdce59d3162452eebb30b0c9a. The transaction status, block confirmation, gas fee, Polygon, and token transfer are shown.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/og-A2EEA.jpg
+
+{Reactions}
+hi5 (22) 🚀 (15) thankyou (8) 🫡 (4) 
+
+[02/24/2024 23:37] masol_66728
+wow, incredible
+
+
+[02/24/2024 23:37] masol_66728
+I cant be more happy than be a part of a community that returns tokens because of a mistake
+
+{Reactions}
+hi5 (23) ➕ (6) 
+
+[02/25/2024 04:33] _paperparachute
+Much appreciated guys, our community is amazing ❤️
+
+{Reactions}
+💯 (16) 
+
+[02/25/2024 06:12] cryptostaker
+done from me as well
+https://polygonscan.com/tx/0xa2a64bfd9515b19f40c2b5a75a7debd711178de72e3dd075dbd6871cc117ab86
+
+{Embed}
+https://polygonscan.com/tx/0xa2a64bfd9515b19f40c2b5a75a7debd711178de72e3dd075dbd6871cc117ab86
+Polygon PoS Chain Transaction Hash (Txhash) Details | PolygonScan
+Polygon (MATIC) detailed transaction info for txhash 0xa2a64bfd9515b19f40c2b5a75a7debd711178de72e3dd075dbd6871cc117ab86. The transaction status, block confirmation, gas fee, Polygon, and token transfer are shown.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/og-A2EEA.jpg
+
+{Reactions}
+hi5 (14) ❤️ (8) 🚀 (5) 
+
+[02/25/2024 08:14] daniel526
+Man, I really love the positive response coming from you guy! Now this is the community to count on!
+
+{Reactions}
+💯 
+
+[02/25/2024 08:40] sockdrawermoney
+Never a doubt 🙂
+
+{Reactions}
+🫡 (9) 
+
+[02/26/2024 05:50] 0x0bserver
+done from me as well
+https://polygonscan.com/tx/0x372775d3b36ff3ecf6047e302cd797da8748a088e5ce6a2e5f665f07bc4b40e1
+
+{Embed}
+https://polygonscan.com/tx/0x372775d3b36ff3ecf6047e302cd797da8748a088e5ce6a2e5f665f07bc4b40e1
+Polygon PoS Chain Transaction Hash (Txhash) Details | PolygonScan
+Polygon (MATIC) detailed transaction info for txhash 0x372775d3b36ff3ecf6047e302cd797da8748a088e5ce6a2e5f665f07bc4b40e1. The transaction status, block confirmation, gas fee, Polygon, and token transfer are shown.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/og-A2EEA.jpg
+
+{Reactions}
+🎉 (9) 🙏 (6) 💜 (2) 
+
+[02/26/2024 08:37] xkeywordx
+wow, didn't know ur here 🙂
+
+{Reactions}
+catjam 
+
+[02/26/2024 12:19] cloudellie
+Seriously, best community 🙌 :cyberheart:
+
+{Reactions}
+cyberheart (9) 💯 (12) 
+
+[02/28/2024 14:04] catscanaudit
+Just realized I had the lowest duped issue in my QA but it didnt get moved to M
+
+{Reactions}
+🥹 
+
+[02/28/2024 14:04] catscanaudit
+and I didn't escalate it
+
+
+[02/28/2024 14:04] catscanaudit
+im stupid lol
+
+
+[02/28/2024 23:45] haxatron1
+Rip
+
+
+[02/29/2024 00:09] agilejune.cp
+Just curious, 1 cent award would be transferred as well ? 🤣 
+I can't check it on my wallet, haha
+
+
+[02/29/2024 15:57] smith3dx
+i have not recieve my reward for the curve contest
+
+{Reactions}
+✅ 👍 
+
+[02/29/2024 22:26] itsmetechjay
+Can you please open a [help desk request](https://code4rena.com/help) and we can take a look?
+
+{Embed}
+https://code4rena.com/help
+Help | Code4rena
+Need help as a developer looking to secure your project or as a Warden finding vulnerabilities? Contact us via our Help page today.
+Code4rena - ARCHIVE-Q1-2024 - curves-jan8 [1192127250527686807].txt_Files/c4-og-banner-39476.png
+
+
+[03/06/2024 14:12] itsmetechjay
+ℹ️ This channel is pending archive.  As a result, any private threads will be permanently deleted on Friday, 15 March 2024. Please make sure to grab anything you might need from those before then.
+
+
+[03/07/2024 20:33] xkeywordx
+When will the official final report on this competition be published?
+
+
+[03/14/2024 14:24] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 639 message(s)
+==============================================================
